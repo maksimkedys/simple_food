@@ -1,0 +1,26 @@
+body {
+  @extend %rubik-400;
+  font-size: 20px;
+  line-height: 1.4;
+  color: $dark;
+  background-color: $silver-100;
+}
+
+.container {
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
