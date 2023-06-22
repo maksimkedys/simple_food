@@ -1,0 +1,168 @@
+.footer {
+  &__top {
+    display: flex;
+    margin-bottom: 61px;
+  }
+
+  &__form {
+    margin-right: 70px;
+  }
+
+  &__logo {
+    display: block;
+    margin-bottom: 30px;
+  }
+
+  &__input {
+    display: block;
+    margin-bottom: 12px;
+    width: 200px;
+    padding: 13px 15px;
+    background-color: $white;
+    font-size: 14px;
+    border-radius: 5px;
+    border: 1px solid $gray;
+    outline: 2px solid transparent;
+    transition: outline-color 0.4s;
+
+    &::placeholder {
+      color: $gray;
+      transition: color 0.4s;
+    }
+
+    &:focus {
+      outline-color: $orange-900;
+    }
+
+    &:hover {
+      &::placeholder {
+        color: $darkBlue-900;
+      }
+    }
+  }
+
+  &__btn {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    @extend %rubik-500;
+
+    svg {
+      margin-right: 15px;
+    }
+
+    path {
+      transition: fill 0.4s;
+    }
+
+    &:focus {
+      path {
+        fill: $orange-900;
+      }
+    }
+
+    &:hover {
+      path {
+        fill: $orange-900;
+      }
+    }
+    
+    &:active {
+      path {
+        fill: $orange-900;
+      }
+    }
+  }
+
+  &__list {
+    margin-right: 70px;
+  }
+
+  &__item:not(:last-child) {
+    margin-bottom: 20px;
+  }
+
+  &__link {
+    letter-spacing: 0.18px;
+  }
+
+  &__contacts-list,
+  &__contacts-item:not(:last-child) {
+    margin-bottom: 22px;
+  }
+
+  &__contacts-link {
+    display: flex;
+    align-items: center;
+
+    svg {
+      margin-right: 7px;
+    }
+
+    path {
+      transition: stroke 0.4s;
+    }
+
+    &:hover {
+      path {
+        stroke: $orange-900;
+      }
+    }
+  }
+
+  &__social {
+    display: flex;
+  }
+
+  &__social-item:not(:last-child) {
+    margin-right: 13px;
+  }
+
+  &__social-link {
+    svg {
+      border-radius: 50%;
+      transition: outline 0.4s;
+    }
+
+    circle,
+    path {
+      transition: fill 0.4s;
+    }
+
+    &:focus {
+      svg {
+        outline: 2px solid rgba(255, 104, 56, 0.7);
+      }
+      circle {
+        fill: rgba(255, 122, 80, 0.1);
+      }
+    }
+    &:hover {
+      circle {
+        fill: #ff7a50;
+      }
+      path {
+        fill: $white;
+      }
+    }
+    &:active {
+      circle {
+        fill: #fff2ed;
+      }
+      path {
+        fill: #ff7a50;
+      }
+    }
+  }
+
+  &__bottom {
+    padding: 30px 0;
+    border-top: 1px solid $gray;
+  }
+
+  &__copy {
+    text-align: center;
+    font-size: 14px;
+    line-height: 1;
+  }
+}
