@@ -1,12 +1,11 @@
-@import 'vars';
-@import 'fonts';
-@import 'global';
 @import 'reset';
+@import 'fonts';
+@import 'vars';
+@import 'global';
 
 @import 'components/header';
 @import 'components/hero';
 @import 'components/popular';
-@import 'components/burger-catalog';
 
 
 

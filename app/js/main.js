@@ -1,5 +1,5 @@
 $(function () {
-  var mixer = mixitup('.burger-catalog', {
+  var mixer = mixitup('.popular__catalog', {
     load: {
       filter: '.burger',
     },
