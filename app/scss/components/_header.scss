@@ -40,8 +40,8 @@
     }
 
     &:focus {
-      background-color: rgba(255, 122, 80, 0.1);
-      border-color: rgba(255, 104, 56, 0.7);
+      background-color: $focus-bg;
+      border-color: $border;
     }
 
     &:hover {
@@ -57,7 +57,7 @@
     }
 
     &:active {
-      background-color: rgba(255, 122, 80, 0.1);
+      background-color: $focus-bg;
     }
   }
 

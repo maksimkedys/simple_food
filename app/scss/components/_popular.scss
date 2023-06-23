@@ -24,8 +24,8 @@
     border-radius: 5px;
     box-shadow: 0 0 0 1px $silver-200;
     color: $darkBlue-900;
-    outline: 2px solid transparent;
-    transition: color 0.4s, background-color 0.4s, outline-color 0.4s, box-shadow 0.4s;
+    border: 2px solid transparent;
+    transition: color 0.4s, background-color 0.4s, border-color 0.4s, box-shadow 0.4s;
 
     path {
       fill: $darkBlue-900;
@@ -33,10 +33,10 @@
     }
 
     &:focus {
-      outline-color: rgba(255, 104, 56, 0.7);
+      border-color: $border;
     }
     &:hover {
-      outline-color: rgba(255, 104, 56, 0.7);
+      border-color: $border;
       color: $orange-900;
       background-color: rgba(255, 104, 56, 0.1);
 
@@ -58,13 +58,16 @@
     }
   }
 
+  &__catalog {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 30px;
+    margin-bottom: 60px;
+  }
+
   &__link-btn {
-    
     &:focus {
       text-decoration-color: $darkBlue-900;
     }
   }
-
 }
-
-

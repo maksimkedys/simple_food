@@ -75,25 +75,21 @@
     }
   }
 
-  &__list {
-    margin-right: 90px;
-  }
-
-  &__list:last-of-type {
+  &__menu {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(90px, auto));
+    grid-column-gap: 90px;
     margin-right: 141px;
-  }
-
-  &__item:not(:last-child) {
-    margin-bottom: 20px;
   }
 
   &__link {
     letter-spacing: 0.18px;
   }
 
+  &__item:not(:last-child),
   &__contacts-list,
   &__contacts-item:not(:last-child) {
-    margin-bottom: 22px;
+    margin-bottom: 20px;
   }
 
   &__contacts-link {
@@ -127,7 +123,8 @@
   &__social-link {
     svg {
       border-radius: 50%;
-      transition: outline 0.4s;
+      border: 2px solid transparent;
+      transition: border-color 0.4s;
     }
 
     circle,
@@ -137,10 +134,10 @@
 
     &:focus {
       svg {
-        outline: 2px solid rgba(255, 104, 56, 0.7);
+        border-color: $border;
       }
       circle {
-        fill: rgba(255, 122, 80, 0.1);
+        fill: $focus-bg;
       }
     }
     &:hover {
@@ -160,7 +157,7 @@
       }
     }
   }
-
+  
   &__bottom {
     padding: 30px 0;
     border-top: 1px solid $gray;
