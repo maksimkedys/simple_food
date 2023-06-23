@@ -1,0 +1,40 @@
+.hero {
+  
+  &__inner {
+    min-height: 660px;
+    background-repeat: no-repeat;
+    background-position: center right;
+    background-size: contain;
+    display: flex;
+    align-items: center;
+  }
+
+  &__content {
+    max-width: 476px;
+    width: 100%;
+  }
+  
+  &__title {
+    font-size: 66px;
+    color: $darkBlue-900;
+    @extend %rubik-500;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+
+  &__subtitle {
+    display: block;
+    color: $orange-900;
+  }
+
+  &__text {
+    max-width: 450px;
+    margin-bottom: 20px;
+    line-height: 1.5;
+  }
+
+  &__btn {
+    margin-right: 25px;
+  }
+
+}
