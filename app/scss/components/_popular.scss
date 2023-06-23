@@ -1,0 +1,70 @@
+.popular {
+  text-align: center;
+  &__title {
+    margin-bottom: 60px;
+  }
+
+  &__filters {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 45px;
+  }
+
+  &__filter {
+    margin-right: 20px;
+  }
+
+  &__btn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 13px 32px;
+    background-color: $white;
+    border-radius: 5px;
+    box-shadow: 0 0 0 1px $silver-200;
+    color: $darkBlue-900;
+    outline: 2px solid transparent;
+    transition: color 0.4s, background-color 0.4s, outline-color 0.4s, box-shadow 0.4s;
+
+    path {
+      fill: $darkBlue-900;
+      transition: fill 0.4s;
+    }
+
+    &:focus {
+      outline-color: rgba(255, 104, 56, 0.7);
+    }
+    &:hover {
+      outline-color: rgba(255, 104, 56, 0.7);
+      color: $orange-900;
+      background-color: rgba(255, 104, 56, 0.1);
+
+      path {
+        fill: $orange-900;
+      }
+    }
+    &:active {
+      box-shadow: 0 -5px 12px 0 rgba(255, 104, 56, 0.2) inset;
+    }
+  }
+
+  .mixitup-control-active {
+    background-color: $orange-900;
+    color: $white;
+
+    path {
+      fill: $white;
+    }
+  }
+
+  &__link-btn {
+    
+    &:focus {
+      text-decoration-color: $darkBlue-900;
+    }
+  }
+
+}
+
+

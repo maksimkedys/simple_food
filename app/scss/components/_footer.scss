@@ -22,8 +22,8 @@
     font-size: 14px;
     border-radius: 5px;
     border: 1px solid $gray;
-    outline: 2px solid transparent;
-    transition: outline-color 0.4s;
+    border: 2px solid transparent;
+    transition: border-color 0.4s;
 
     &::placeholder {
       color: $gray;
@@ -31,7 +31,7 @@
     }
 
     &:focus {
-      outline-color: $orange-900;
+      border-color: $orange-900;
     }
 
     &:hover {
@@ -46,6 +46,7 @@
     display: flex;
     align-items: center;
     @extend %rubik-500;
+    font-size: 14px;
 
     svg {
       margin-right: 15px;
@@ -66,7 +67,7 @@
         fill: $orange-900;
       }
     }
-    
+
     &:active {
       path {
         fill: $orange-900;
@@ -75,7 +76,11 @@
   }
 
   &__list {
-    margin-right: 70px;
+    margin-right: 90px;
+  }
+
+  &__list:last-of-type {
+    margin-right: 141px;
   }
 
   &__item:not(:last-child) {
@@ -94,6 +99,7 @@
   &__contacts-link {
     display: flex;
     align-items: center;
+    font-size: 16px;
 
     svg {
       margin-right: 7px;
@@ -158,11 +164,13 @@
   &__bottom {
     padding: 30px 0;
     border-top: 1px solid $gray;
+    background-color: $darkBlue-900;
   }
 
   &__copy {
     text-align: center;
     font-size: 14px;
     line-height: 1;
+    color: $white;
   }
 }
