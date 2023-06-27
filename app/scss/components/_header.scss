@@ -1,4 +1,4 @@
-.menu {
+.header {
   position: fixed;
   left: 0;
   right: 0;
@@ -8,19 +8,44 @@
   display: flex;
   align-items: center;
   padding: 60px 0;
-  background-color: $silver-100;
 
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    bottom: 0;
+    width: 100vw;
+    transform: translateX(-50%);
+    background-color: transparent;
+    z-index: -1;
+    transition: background-color 0.4s;
+  }
+
+  &--scrolled {
+    &::before {
+      background-color: $silver-100;
+    }
+  }
+}
+
+.menu {
+  margin-left: auto;
   &__list {
     display: flex;
     margin-right: 50px;
   }
 
-  &__item:not(:last-child) {
-    margin-right: 45px;
+  &__item {
+    &:not(:last-child) {
+      margin-right: 45px;
+    }
   }
 
-  &__link--active {
-    color: $orange-900;
+  &__link {
+    &.current {
+      color: $accent;
+    }
   }
 }
 
@@ -47,24 +72,24 @@
     }
 
     &:focus {
-      background-color: $focus-bg;
-      border-color: $border;
+      background-color: $bg-01;
+      border-color: $accent-07;
     }
 
     &:hover {
       background-color: #ff7a50;
       ellipse,
       path {
-        stroke: $white;
+        stroke: $lite;
       }
       .user-nav__num {
-        color: $orange-900;
-        background-color: $white;
+        color: $accent;
+        background-color: $lite;
       }
     }
 
     &:active {
-      background-color: $focus-bg;
+      background-color: $bg-01;
     }
   }
 
@@ -78,8 +103,8 @@
     line-height: 14px;
     text-align: center;
     border-radius: 50%;
-    color: $white;
-    background-color: $orange-900;
+    color: $lite;
+    background-color: $accent;
     transition: background-color 0.4s, color 0.4s;
   }
 }

@@ -20,7 +20,7 @@
     align-items: center;
     gap: 10px;
     padding: 13px 32px;
-    background-color: $white;
+    background-color: $lite;
     border-radius: 5px;
     box-shadow: 0 0 0 1px $silver-200;
     color: $darkBlue-900;
@@ -33,15 +33,15 @@
     }
 
     &:focus {
-      border-color: $border;
+      border-color: $accent-07;
     }
     &:hover {
-      border-color: $border;
-      color: $orange-900;
+      border-color: $accent-07;
+      color: $accent;
       background-color: rgba(255, 104, 56, 0.1);
 
       path {
-        fill: $orange-900;
+        fill: $accent;
       }
     }
     &:active {
@@ -50,11 +50,11 @@
   }
 
   .mixitup-control-active {
-    background-color: $orange-900;
-    color: $white;
+    background-color: $accent;
+    color: $lite;
 
     path {
-      fill: $white;
+      fill: $lite;
     }
   }
 

@@ -1,10 +1,10 @@
 .footer {
   &__top {
     display: flex;
-    margin-bottom: 61px;
+    padding-bottom: 60px;
   }
 
-  &__form {
+  &__form-logo {
     margin-right: 70px;
   }
 
@@ -16,13 +16,12 @@
   &__input {
     display: block;
     margin-bottom: 12px;
-    width: 200px;
+    max-width: 200px;
     padding: 13px 15px;
-    background-color: $white;
+    background-color: $lite;
     font-size: 14px;
     border-radius: 5px;
     border: 1px solid $gray;
-    border: 2px solid transparent;
     transition: border-color 0.4s;
 
     &::placeholder {
@@ -31,7 +30,7 @@
     }
 
     &:focus {
-      border-color: $orange-900;
+      border: 2px solid $accent;
     }
 
     &:hover {
@@ -45,7 +44,7 @@
     width: 100%;
     display: flex;
     align-items: center;
-    @extend %rubik-500;
+    font-weight: 500;
     font-size: 14px;
 
     svg {
@@ -58,27 +57,29 @@
 
     &:focus {
       path {
-        fill: $orange-900;
+        fill: $accent;
       }
     }
 
     &:hover {
       path {
-        fill: $orange-900;
+        fill: $accent;
       }
     }
 
     &:active {
       path {
-        fill: $orange-900;
+        fill: $accent;
       }
     }
   }
 
   &__menu {
     display: grid;
+    grid-template-rows: repeat(4, 1fr);
     grid-template-columns: repeat(3, minmax(90px, auto));
-    grid-column-gap: 90px;
+    grid-gap: 20px 90px;
+    height: 100%;
     margin-right: 141px;
   }
 
@@ -86,10 +87,15 @@
     letter-spacing: 0.18px;
   }
 
-  &__item:not(:last-child),
-  &__contacts-list,
-  &__contacts-item:not(:last-child) {
+  &__contacts-list {
     margin-bottom: 20px;
+  }
+
+  &__contacts-item {
+    
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
   }
 
   &__contacts-link {
@@ -107,7 +113,7 @@
 
     &:hover {
       path {
-        stroke: $orange-900;
+        stroke: $accent;
       }
     }
   }
@@ -116,8 +122,11 @@
     display: flex;
   }
 
-  &__social-item:not(:last-child) {
-    margin-right: 13px;
+  &__social-item {
+
+    &:not(:last-child) {
+      margin-right: 13px;
+    }
   }
 
   &__social-link {
@@ -134,10 +143,10 @@
 
     &:focus {
       svg {
-        border-color: $border;
+        border-color: $accent-07;
       }
       circle {
-        fill: $focus-bg;
+        fill: $bg-01;
       }
     }
     &:hover {
@@ -145,7 +154,7 @@
         fill: #ff7a50;
       }
       path {
-        fill: $white;
+        fill: $lite;
       }
     }
     &:active {
@@ -168,6 +177,6 @@
     text-align: center;
     font-size: 14px;
     line-height: 1;
-    color: $white;
+    color: $lite;
   }
 }
