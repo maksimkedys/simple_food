@@ -47,28 +47,28 @@
     font-weight: 500;
     font-size: 14px;
 
-    svg {
+    .icon {
+      width: 16px;
+      height: 16px;
+      fill: $lite;
       margin-right: 15px;
-    }
-
-    path {
       transition: fill 0.4s;
     }
 
     &:focus {
-      path {
+      .icon {
         fill: $accent;
       }
     }
 
     &:hover {
-      path {
+      .icon {
         fill: $accent;
       }
     }
 
     &:active {
-      path {
+      .icon {
         fill: $accent;
       }
     }
@@ -76,7 +76,6 @@
 
   &__menu {
     display: grid;
-    grid-template-rows: repeat(4, 1fr);
     grid-template-columns: repeat(3, minmax(90px, auto));
     grid-gap: 20px 90px;
     height: 100%;
@@ -92,7 +91,6 @@
   }
 
   &__contacts-item {
-    
     &:not(:last-child) {
       margin-bottom: 20px;
     }
@@ -103,16 +101,18 @@
     align-items: center;
     font-size: 16px;
 
-    svg {
+    .icon {
+      fill: transparent;
+      stroke: $dark;
+      stroke-width: 1.5px;
+      width: 24px;
+      height: 24px;
       margin-right: 7px;
-    }
-
-    path {
       transition: stroke 0.4s;
     }
 
     &:hover {
-      path {
+      .icon {
         stroke: $accent;
       }
     }
@@ -123,50 +123,54 @@
   }
 
   &__social-item {
-
+    display: flex;
+    align-items: center;
+    justify-content: center;
     &:not(:last-child) {
       margin-right: 13px;
     }
   }
 
   &__social-link {
-    svg {
-      border-radius: 50%;
-      border: 2px solid transparent;
-      transition: border-color 0.4s;
-    }
-
-    circle,
-    path {
+    width: 39px;
+    height: 39px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $silver-200;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    transition: background-color 0.4s, border-color 0.4s;
+    
+    .icon {
+      width: 20px;
+      height: 20px;
+      fill: $dark;
       transition: fill 0.4s;
     }
 
     &:focus {
-      svg {
-        border-color: $accent-07;
-      }
-      circle {
-        fill: $bg-01;
-      }
+      border-color: $accent-07;
+      background-color: $bg-01;
     }
+
     &:hover {
-      circle {
-        fill: #ff7a50;
-      }
-      path {
-        fill: $lite;
-      }
-    }
-    &:active {
-      circle {
+      background-color: #ff7a50;
+
+      .icon {
         fill: #fff2ed;
       }
-      path {
+    }
+
+    &:active {
+      background-color: #fff2ed;
+
+      .icon {
         fill: #ff7a50;
       }
     }
   }
-  
+
   &__bottom {
     padding: 30px 0;
     border-top: 1px solid $gray;

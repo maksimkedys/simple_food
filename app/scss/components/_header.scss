@@ -4,10 +4,9 @@
   right: 0;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 15px;
+  padding: 60px 15px;
   display: flex;
   align-items: center;
-  padding: 60px 0;
 
   &::before {
     content: "";
@@ -52,8 +51,17 @@
 .user-nav {
   display: flex;
 
-  &__item:not(:last-child) {
-    margin-right: 10px;
+  &__item {
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
+  }
+
+  & .icon {
+    stroke-width: 1.5px;
+    fill: transparent;
+    stroke: $darkBlue-900;
+    transition: stroke 0.4s;
   }
 
   &__link {
@@ -66,10 +74,6 @@
     border-radius: 5px;
     border: 2px solid transparent;
     transition: background-color 0.4s, border-color 0.4s, color 0.4s;
-    ellipse,
-    path {
-      transition: stroke 0.4s;
-    }
 
     &:focus {
       background-color: $bg-01;
@@ -78,10 +82,11 @@
 
     &:hover {
       background-color: #ff7a50;
-      ellipse,
-      path {
+
+      .icon {
         stroke: $lite;
       }
+
       .user-nav__num {
         color: $accent;
         background-color: $lite;
