@@ -4,7 +4,7 @@
     padding-bottom: 60px;
   }
 
-  &__form-logo {
+  &__top-item {
     margin-right: 70px;
   }
 
@@ -20,6 +20,7 @@
     padding: 13px 15px;
     background-color: $lite;
     font-size: 14px;
+    border: 2px solid transparent;
     border-radius: 5px;
     border: 1px solid $gray;
     transition: border-color 0.4s;
@@ -30,7 +31,7 @@
     }
 
     &:focus {
-      border: 2px solid $accent;
+      border-color: $accent;
     }
 
     &:hover {
@@ -47,31 +48,19 @@
     font-weight: 500;
     font-size: 14px;
 
-    .icon {
-      width: 16px;
-      height: 16px;
-      fill: $lite;
-      margin-right: 15px;
-      transition: fill 0.4s;
-    }
-
-    &:focus {
-      .icon {
-        fill: $accent;
-      }
-    }
-
-    &:hover {
-      .icon {
-        fill: $accent;
-      }
-    }
-
+    &:focus,
+    &:hover,
     &:active {
-      .icon {
+      .footer__btn-icon {
         fill: $accent;
       }
     }
+  }
+
+  &__btn-icon {
+    fill: $lite;
+    margin-right: 15px;
+    transition: fill 0.4s;
   }
 
   &__menu {
@@ -96,26 +85,27 @@
     }
   }
 
+  &__contacts-span,
   &__contacts-link {
     display: flex;
     align-items: center;
     font-size: 16px;
+  }
 
-    .icon {
-      fill: transparent;
-      stroke: $dark;
-      stroke-width: 1.5px;
-      width: 24px;
-      height: 24px;
-      margin-right: 7px;
-      transition: stroke 0.4s;
-    }
-
+  &__contacts-link {
     &:hover {
-      .icon {
+      .footer__contacts-icon {
         stroke: $accent;
       }
     }
+  }
+
+  &__contacts-icon {
+    fill: transparent;
+    stroke: $dark;
+    stroke-width: 1.5px;
+    margin-right: 7px;
+    transition: stroke 0.4s;
   }
 
   &__social {
@@ -141,13 +131,6 @@
     border-radius: 50%;
     border: 2px solid transparent;
     transition: background-color 0.4s, border-color 0.4s;
-    
-    .icon {
-      width: 20px;
-      height: 20px;
-      fill: $dark;
-      transition: fill 0.4s;
-    }
 
     &:focus {
       border-color: $accent-07;
@@ -157,7 +140,7 @@
     &:hover {
       background-color: #ff7a50;
 
-      .icon {
+      .footer__social-icon {
         fill: #fff2ed;
       }
     }
@@ -165,10 +148,15 @@
     &:active {
       background-color: #fff2ed;
 
-      .icon {
+      .footer__social-icon {
         fill: #ff7a50;
       }
     }
+  }
+
+  &__social-icon {
+    fill: $dark;
+    transition: fill 0.4s;
   }
 
   &__bottom {

@@ -4,15 +4,17 @@
     margin-bottom: 60px;
   }
 
-  &__filters {
+  &__list {
     display: flex;
     align-items: center;
     justify-content: center;
     margin-bottom: 45px;
   }
 
-  &__filter {
-    margin-right: 20px;
+  &__item {
+    &:not(:last-child) {
+      margin-right: 20px;
+    }
   }
 
   &__btn {
@@ -27,13 +29,6 @@
     border: 2px solid transparent;
     transition: color 0.4s, background-color 0.4s, border-color 0.4s, box-shadow 0.4s;
 
-    & .icon {
-      width: 44px;
-      height: 44px;
-      fill: $darkBlue-900;
-      transition: fill 0.4s;
-    }
-
     &:focus {
       border-color: $accent-07;
     }
@@ -42,22 +37,27 @@
       color: $accent;
       background-color: rgba(255, 104, 56, 0.1);
 
-      .icon {
+      .popular__btn-icon {
         fill: $accent;
       }
     }
     &:active {
       box-shadow: 0 -5px 12px 0 rgba(255, 104, 56, 0.2) inset;
     }
+
+    &.mixitup-control-active {
+      background-color: $accent;
+      color: $lite;
+
+      .popular__btn-icon {
+        fill: $lite;
+      }
+    }
   }
 
-  .mixitup-control-active {
-    background-color: $accent;
-    color: $lite;
-
-    .icon {
-      fill: $lite;
-    }
+  &__btn-icon {
+    fill: $darkBlue-900;
+    transition: fill 0.4s;
   }
 
   &__catalog {
@@ -67,7 +67,7 @@
     margin-bottom: 60px;
   }
 
-  &__link-btn {
+  &__link {
     &:focus {
       text-decoration-color: $darkBlue-900;
     }
