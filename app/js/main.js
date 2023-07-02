@@ -1,7 +1,7 @@
 $(function () {
 
   $(window).on('scroll', function () {
-    $('.header').toggleClass('header--scrolled', $(window).scrollTop() > 0);
+    $('.header__container').toggleClass('header__container--scrolled', $(window).scrollTop() > 0);
   });
 
   var mixer = mixitup('.popular__catalog', {
