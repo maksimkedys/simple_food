@@ -1,0 +1,165 @@
+.testimonials {
+  
+  &__title {
+    text-align: center;
+    margin-bottom: 60px;
+  }
+
+  &__content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+    margin-right: 35px;
+  }
+
+  &__img {
+    margin-right: 80px;
+    border-radius: 50%;
+  }
+
+  &__quote {
+    max-width: 569px;
+    width: 100%;
+  }
+
+  &__text {
+    position: relative;
+    margin-bottom: 30px;
+    font-style: italic;
+    line-height: 1.5;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      width: 24px;
+      height: 20px;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center;
+    }
+
+    &::before {
+      background-image: url("../../images/quote-left.svg");
+      top: 0;
+      left: -40px;
+    }
+
+    &::after {
+      background-image: url("../../images/quote-right.svg");
+      bottom: 0;
+      right: -40px;
+    }
+  }
+
+  &__author {
+    display: block;
+    margin-bottom: 15px;
+    font-weight: 500;
+    font-style: normal;
+    color: $accent;
+  }
+
+  &__author-info {
+    font-size: 14px;
+  }
+
+  .slick-dots {
+    display: flex;
+    justify-content: center;
+
+    li {
+      &:not(last-child) {
+        margin-right: 15px;
+      }
+    }
+
+    button {
+      width: 15px;
+      height: 15px;
+      font-size: 0;
+      background-color: $gray;
+      border: 2px solid transparent;
+      border-radius: 50%;
+      transition: background-color 0.4s, border-color 0.4s;
+
+      &:focus {
+        border-color: $accent;
+      }
+
+      &:hover {
+        background-color: #fff2ed;
+        border-color: rgba(255, 104, 56, 0.5);
+      }
+
+      &:active {
+        background-color: rgba(255, 104, 56, 0.5);
+      }
+    }
+  }
+
+  .slick-active {
+    button {
+      background-color: $accent;
+    }
+  }
+
+  .slick-icon {
+    fill: $gray;
+    transition: fill 0.4s;
+  }
+
+  .slick-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    bottom: -10px;
+    width: 40px;
+    height: 40px;
+    border: 3px solid $gray;
+    outline: 2px solid transparent;
+    border-radius: 50%;
+    transition: outline-color 0.4s, background-color 0.4s, border-color 0.4s;
+
+    &.current {
+      border-color: $accent;
+      .slick-icon {
+        fill: $accent;
+      }
+    }
+
+    &:focus {
+      outline-color: $accent-07;
+    }
+
+    &:hover {
+      background-color: #fff2ed;
+      border-color: rgba(255, 104, 56, 0.5);
+
+      .slick-icon {
+        fill: rgba(255, 104, 56, 0.5);
+      }
+    }
+
+    &:active {
+      background-color: #fff2ed;
+
+      .slick-icon {
+        fill: $accent;
+      }
+    }
+  }
+
+  .slick-prev {
+    transform: translateX(-100px);
+  }
+
+  .slick-next {
+    transform: translateX(85px);
+  }
+}

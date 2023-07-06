@@ -1,7 +1,7 @@
 .hero {
   padding-top: 164px;
   &__inner {
-    height: 62vh;
+    min-height: 62vh;
     background-repeat: no-repeat;
     background-position: center right;
     background-size: contain;

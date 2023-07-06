@@ -1,11 +1,13 @@
 .header {
-
   &__container {
     position: fixed;
     left: 0;
     right: 0;
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    padding: 60px 15px;
+    z-index: 1000;
 
     &::before {
       content: "";
@@ -19,25 +21,23 @@
       z-index: -1;
       transition: background-color 0.4s;
     }
-  
+
     &--scrolled {
       &::before {
         background-color: $silver-100;
       }
     }
   }
-
 }
 
 .menu {
   display: flex;
   align-items: center;
-  padding: 60px 0;
-  width: 100%;
-  
+  justify-content: space-between;
+  width: 92%;
+
   &__list {
     display: flex;
-    margin-left: auto;
     margin-right: 50px;
   }
 
@@ -63,7 +63,7 @@
     }
   }
 
-  .user-nav__icon {
+  &__icon {
     stroke-width: 1.5px;
     fill: transparent;
     stroke: $darkBlue-900;

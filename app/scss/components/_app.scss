@@ -1,0 +1,49 @@
+.app {
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__content {
+    max-width: 470px;
+  }
+
+  &__title {
+    margin-bottom: 45px;
+  }
+
+  &__text {
+    margin-bottom: 30px;
+    line-height: 1.5;
+  }
+
+  &__link {
+    display: inline-block;
+    width: 135px;
+    height: 40px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    border-radius: 5px;
+    outline: 1px solid $gray;
+    transition: outline 0.4s, transform 0.4s;
+
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+
+    &:focus {
+      outline: 2px solid $darkBlue-900;
+    }
+
+    &:hover {
+      transform: scale(1.1);
+    }
+
+    &:active {
+      transform: scale(0.9);
+    }
+  }
+}
+
