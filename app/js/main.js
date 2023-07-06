@@ -1,5 +1,12 @@
 $(function () {
   
+  $('.user-nav__btn--search').on('click', function () {
+    $('.user-nav__search').toggleClass('active');
+    $('.user-nav__search-input').trigger("focus");
+    $('.user-nav__search-input').val('');
+  });
+
+
   $('.testimonials__inner').slick({
     dots: true,
     arrows: true,

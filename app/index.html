@@ -31,15 +31,21 @@
         </li>
       </ul>
     </nav>
-    
+
     <ul class="user-nav">
       <li class="user-nav__item">
-        <button class="user-nav__btn" type="button">
-          <svg class="user-nav__icon" width="21" height="22">
-            <use href="images/sprite.svg#icon-search"></use>
-          </svg>
-          <span class="sr-only">Кнопка пошуку товарів</span>
-        </button>
+        <div class="user-nav__search">
+          <label class="user-nav__search-label">
+            <span class="sr-only">Введіть назву товару</span>
+            <input type="text" class="user-nav__search-input" placeholder="Пошук...">
+          </label>
+          <button class="user-nav__btn user-nav__btn--search" type="button">
+            <svg class="user-nav__icon" width="21" height="22">
+              <use href="images/sprite.svg#icon-search"></use>
+            </svg>
+            <span class="sr-only">Кнопка пошуку товарів</span>
+          </button>
+        </div>
       </li>
       <li class="user-nav__item">
         <button class="user-nav__btn" type="button">
@@ -51,7 +57,7 @@
         </button>
       </li>
     </ul>
-  
+
   </div>
 </header>
 
