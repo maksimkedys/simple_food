@@ -27,31 +27,19 @@
           <a class="menu__link link" href="#">Страви</a>
         </li>
         <li class="menu__item">
-          <a class="menu__link link" href="#">Контакти</a>
+          <a class="menu__link link" href="#footer">Контакти</a>
         </li>
       </ul>
     </nav>
 
     <ul class="user-nav">
       <li class="user-nav__item">
-        <form class="user-nav__search">
-          <label class="user-nav__search-label">
-            <span class="sr-only">Введіть назву товару</span>
-            <input class="user-nav__search-input" name="search" type="search">
-          </label>
-          <button class="user-nav__btn user-nav__btn--search" type="button">
-            <svg class="user-nav__icon" width="21" height="22">
-              <use href="images/sprite.svg#icon-search"></use>
-            </svg>
-            <span class="sr-only">Кнопка пошуку товарів</span>
-          </button>
-          <button class="user-nav__btn user-nav__btn--submit" type="submit">
-            <svg class="user-nav__icon user-nav__icon--submit" width="11" height="19">
-              <use href="images/sprite.svg#next-arrow"></use>
-            </svg>
-            <span class="sr-only">Кнопка пошуку товарів</span>
-          </button>
-        </form>
+        <button class="user-nav__btn" type="button">
+          <svg class="user-nav__icon" width="21" height="22">
+            <use href="images/sprite.svg#icon-search"></use>
+          </svg>
+          <span class="sr-only">Кнопка пошуку товарів</span>
+        </button>
       </li>
       <li class="user-nav__item">
         <button class="user-nav__btn" type="button">
@@ -69,7 +57,7 @@
       <span class="sr-only">Відкрити меню</span>
     </button>
   </div>
-</header> 
+</header>
 
   <main class="main">
     
@@ -85,12 +73,12 @@
         Ресторани, які ви любите - у ваших руках. Встановлюйте застосунок та замовляйте їжу в зручному місці в зручний
         час
       </p>
-      <a class="app__link" href="#" style="background-image: url('../../images/app-store.jpg'); width: 120px;">
+      <a class="app__link app__link--appstore" href="#" style="background-image: url('images/app-store.jpg');">
         <span class="sr-only">
           Посилання на скачування додатку в AppStore
         </span>
       </a>
-      <a class="app__link" href="#" style="background-image: url('../../images/play-store.jpg');">
+      <a class="app__link" href="#" style="background-image: url('images/play-store.jpg');">
         <span class="sr-only">
           Посилання на скачування додатку в GooglePlay
         </span>
@@ -103,7 +91,7 @@
 
   </main>
 
-  <footer class="footer">
+  <footer class="footer" id="footer">
   <div class="container">
 
     <div class="footer__top">
