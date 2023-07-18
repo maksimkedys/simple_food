@@ -3,19 +3,46 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    @include r($lg) {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 45px;
+    }
   }
 
   &__content {
     max-width: 470px;
+    width: 100%;
+    @include r($md) {
+      max-width: 100%;
+    }
+  }
+
+  &__img {
+    @include r($xl) {
+      max-width: 49%;
+    }
+    @include r($lg) {
+      max-width: 100%;
+    }
+    @include r($sm) {
+      display: none;
+    }
   }
 
   &__title {
     margin-bottom: 45px;
+    @include r($lg) {
+      margin-bottom: 15px;
+    }
   }
 
   &__text {
     margin-bottom: 30px;
     line-height: 1.5;
+    @include r($lg) {
+      margin-bottom: 15px;
+    }
   }
 
   &__link {
@@ -27,7 +54,9 @@
     background-position: center center;
     border-radius: 5px;
     outline: 1px solid $gray;
-    transition: outline 0.4s, transform 0.4s;
+    transition:
+      outline 0.4s,
+      transform 0.4s;
 
     &:not(:last-child) {
       margin-right: 30px;
@@ -44,6 +73,8 @@
     &:active {
       transform: scale(0.9);
     }
+    &--appstore {
+      width: 120px;
+    }
   }
 }
-

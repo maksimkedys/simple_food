@@ -9,6 +9,23 @@
     padding: 60px 15px;
     z-index: 1000;
 
+    @include r($lg) {
+      padding: 45px 15px;
+    }
+    @include r($sm) {
+      padding: 25px 15px;
+
+      .logo {
+        width: 110px;
+      }
+    }
+    @media (max-width: 992px) and (orientation: landscape) {
+      padding: 25px 15px;
+      .logo {
+        width: 110px;
+      }
+    }
+
     &::before {
       content: "";
       position: absolute;
@@ -30,6 +47,14 @@
   }
 }
 
+.burger-menu {
+  @include burger(30px, 20px, 2px, $darkBlue-900);
+  display: none;
+  @include r($lg) {
+    display: block;
+  }
+}
+
 .menu {
   display: flex;
   align-items: center;
@@ -39,6 +64,10 @@
   &__list {
     display: flex;
     margin-right: 50px;
+
+    @include r($lg) {
+      display: none;
+    }
   }
 
   &__item {
@@ -56,6 +85,9 @@
 
 .user-nav {
   display: flex;
+  @include r($lg) {
+    margin-right: 17px;
+  }
 
   &__item {
     &:not(:last-child) {
@@ -68,32 +100,11 @@
     fill: transparent;
     stroke: $darkBlue-900;
     transition: stroke 0.4s;
-  }
 
-  &__search {
-    position: relative;
-    display: flex;
-    height: 44px;
-
-    &.active {
-      .user-nav__search-input {
-        width: 200px;
-        outline-color: $accent;
-      }
-      // .user-nav__btn--search {
-      //   transform: translateX(156px);
-      // }
+    &--submit {
+      stroke-width: 1px;
+      fill: $darkBlue-900;
     }
-  }
-
-  &__search-input {
-    width: 44px;
-    height: 100%;
-    padding: 10px 10px 10px 54px;
-    font-size: 14px;
-    outline: 1px solid transparent;
-    border-radius: 5px;
-    transition: width 0.4s, outline-color 0.4s;
   }
 
   &__btn {
@@ -104,9 +115,11 @@
     width: 44px;
     height: 44px;
     border-radius: 5px;
-    background-color: $silver-100;
     border: 2px solid transparent;
-    transition: background-color 0.4s, border-color 0.4s, color 0.4s;
+    transition:
+      background-color 0.4s,
+      border-color 0.4s,
+      color 0.4s;
 
     &:focus {
       background-color: $bg-01;
@@ -129,11 +142,6 @@
     &:active {
       background-color: $bg-01;
     }
-
-    &--search {
-      position: absolute;
-      // transition: transform 0.4s;
-    }
   }
 
   &__num {
@@ -148,6 +156,8 @@
     border-radius: 50%;
     color: $lite;
     background-color: $accent;
-    transition: background-color 0.4s, color 0.4s;
+    transition:
+      background-color 0.4s,
+      color 0.4s;
   }
 }

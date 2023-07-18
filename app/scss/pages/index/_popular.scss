@@ -2,6 +2,12 @@
   text-align: center;
   &__title {
     margin-bottom: 60px;
+    @include r($lg) {
+      margin-bottom: 45px;
+    }
+    @include r($sm) {
+      margin-bottom: 30px;
+    }
   }
 
   &__list {
@@ -9,11 +15,21 @@
     align-items: center;
     justify-content: center;
     margin-bottom: 45px;
+    @include r($xl) {
+      justify-content: space-between;
+      overflow-x: scroll;
+    }
+    @include r($sm) {
+      margin-bottom: 30px;
+    }
   }
 
   &__item {
     &:not(:last-child) {
       margin-right: 20px;
+      @include r($lg) {
+        margin-right: 10px;
+      }
     }
   }
 
@@ -22,12 +38,17 @@
     align-items: center;
     gap: 10px;
     padding: 13px 32px;
+    width: max-content;
     background-color: $lite;
     border-radius: 5px;
     box-shadow: 0 0 0 1px $silver-200;
     color: $darkBlue-900;
     border: 2px solid transparent;
-    transition: color 0.4s, background-color 0.4s, border-color 0.4s, box-shadow 0.4s;
+    transition:
+      color 0.4s,
+      background-color 0.4s,
+      border-color 0.4s,
+      box-shadow 0.4s;
 
     &:focus {
       border-color: $accent-07;
@@ -53,11 +74,22 @@
         fill: $lite;
       }
     }
+    @include r($sm) {
+      gap: 5px;
+      font-size: 14px;
+      padding: 12px 16px;
+    }
   }
 
   &__btn-icon {
+    width: 44px;
+    height: 44px;
     fill: $darkBlue-900;
     transition: fill 0.4s;
+    @include r($sm) {
+      width: 20px;
+      height: 20px;
+    }
   }
 
   &__catalog {
@@ -65,6 +97,15 @@
     grid-template-columns: repeat(5, 1fr);
     grid-gap: 30px;
     margin-bottom: 60px;
+    @include r($lg) {
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 10px 5px;
+    }
+    @include r($md) {
+      grid-template-columns: repeat(2, 1fr);
+      margin-bottom: 30px;
+    }
+    
   }
 
   &__link {
@@ -73,3 +114,4 @@
     }
   }
 }
+

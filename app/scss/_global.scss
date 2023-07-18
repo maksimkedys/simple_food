@@ -40,16 +40,46 @@ body {
   font-weight: 500;
   font-size: 36px;
   color: $darkBlue-900;
+
+  @include r($sm) {
+    font-size: 24px;
+  }
+}
+
+.lock {
+  overflow: hidden;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+  }
 }
 
 .section {
   padding-bottom: 120px;
+
+  @include r($lg) {
+    padding-bottom: 80px;
+  }
+
+  @include r($sm) {
+    padding-bottom: 40px;
+  }
 }
 
 .logo {
   border-radius: 5px;
   outline: 2px solid transparent;
-  transition: outline-color 0.4s, opacity 0.4s;
+  transition:
+    outline-color 0.4s,
+    opacity 0.4s;
 
   &:focus {
     outline-color: rgba(255, 104, 56, 0.7);
@@ -62,16 +92,24 @@ body {
   &:active {
     opacity: 0.5;
   }
+
+  &__img {
+    object-fit: contain;
+  }
 }
 
 .btn {
+  display: inline-block;
   padding: 7px 14px;
   font-size: 14px;
   background-color: $accent;
   color: $lite;
   border-radius: 5px;
   border: 2px solid transparent;
-  transition: color 0.4s, background-color 0.4s, border-color 0.4s;
+  transition:
+    color 0.4s,
+    background-color 0.4s,
+    border-color 0.4s;
 
   &:focus {
     background-color: $bg-01;
@@ -93,14 +131,22 @@ body {
   &--big {
     font-size: 18px;
     padding: 13px 32px;
+
+    @include r($sm) {
+      font-size: 14px;
+      padding: 8px 24px;
+    }
   }
-} 
+}
 
 .link {
   font-size: 18px;
   border-radius: 5px;
   border: 2px solid transparent;
-  transition: color 0.4s, border-color 0.4s, text-shadow 0.4s;
+  transition:
+    color 0.4s,
+    border-color 0.4s,
+    text-shadow 0.4s;
 
   &:focus {
     border-color: $accent-07;
@@ -121,8 +167,12 @@ body {
   color: $darkBlue-900;
   border-radius: 5px;
   border: 2px solid transparent;
-  text-decoration: solid underline 1px;
-  transition: text-decoration-color 0.4s, color 0.4s, border-color 0.4s, text-shadow 0.4s;
+  text-decoration: underline solid 1px;
+  transition:
+    text-decoration-color 0.4s,
+    color 0.4s,
+    border-color 0.4s,
+    text-shadow 0.4s;
 
   &:focus {
     border-color: $accent-07;
@@ -137,6 +187,10 @@ body {
   &:active {
     text-shadow: 2px 2px 5px rgba(49, 53, 43, 0.5);
     text-decoration-color: transparent;
+  }
+
+  @include r($sm) {
+    font-size: 16px;
   }
 }
 
@@ -156,10 +210,17 @@ body {
     border-color: $accent;
   }
 
+  @include r($sm) {
+    padding: 20px 10px;
+  }
+
   &__link {
     border-radius: 5px;
     border: 2px solid transparent;
-    transition: transform 0.4s, border-color 0.4s, text-shadow 0.4s;
+    transition:
+      transform 0.4s,
+      border-color 0.4s,
+      text-shadow 0.4s;
 
     &:focus {
       border-color: $accent-07;
@@ -184,5 +245,81 @@ body {
     font-weight: 500;
     font-size: 15px;
     line-height: 1.4;
+  }
+}
+
+.restaurant-card {
+  &__img {
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+  }
+
+  &__content {
+    padding: 15px 20px 20px;
+  }
+
+  &__title {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  &__box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__time {
+    font-size: 18px;
+    font-weight: 300;
+    background-image: url("../images/icon-timer.svg");
+    background-repeat: no-repeat;
+    background-size: 22px 22px;
+    background-position: left;
+    padding-left: 32px;
+  }
+
+  &__link {
+    padding: 5px 27px 0 28px;
+    border-radius: 20px;
+    background-color: $accent;
+    outline: 2px solid transparent;
+    transition:
+      outline-color 0.4s,
+      background-color 0.4s;
+
+    &:focus {
+      outline-color: $accent-07;
+      background-color: #fff2ed;
+
+      .restaurant-card__link-icon {
+        fill: $accent;
+      }
+    }
+
+    &:hover {
+      background-color: $lite;
+      outline-color: $accent-07;
+
+      .restaurant-card__link-icon {
+        fill: $accent;
+        transform: translateX(100%);
+      }
+    }
+
+    &:active {
+      background-color: #fff2ed;
+
+      .restaurant-card__link-icon {
+        fill: $accent;
+      }
+    }
+  }
+
+  &__link-icon {
+    fill: $lite;
+    transition:
+      fill 0.4s,
+      transform 0.6s;
   }
 }

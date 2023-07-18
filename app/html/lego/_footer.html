@@ -1,4 +1,4 @@
-<footer class="footer">
+<footer class="footer" id="footer">
   <div class="container">
 
     <div class="footer__top">
@@ -59,62 +59,8 @@
           <a class="footer__link link" href="#">Мапа сайту</a>
         </li>
       </ul>
-
-      <address class="footer__contacts">
-        <ul class="footer__contacts-list">
-          <li class="footer__contacts-item">
-            <span class="footer__contacts-location">
-              <svg class="footer__contacts-icon" width="24" height="24">
-                <use href="images/sprite.svg#icon-location"></use>
-              </svg>
-              вул. Т.Г.Шевченка, 1
-            </span>
-          </li>
-          <li class="footer__contacts-item">
-            <a class="footer__contacts-link link" href="tel:+380501112233">
-              <svg class="footer__contacts-icon" width="24" height="24">
-                <use href="images/sprite.svg#icon-phone"></use>
-              </svg>
-              380501112233
-            </a>
-          </li>
-          <li class="footer__contacts-item">
-            <a class="footer__contacts-link link" href="mailto:support@sfood.com">
-              <svg class="footer__contacts-icon" width="24" height="24">
-                <use href="images/sprite.svg#icon-message"></use>
-              </svg>
-              support@sfood.com
-            </a>
-          </li>
-        </ul>
-
-        <ul class="footer__social">
-          <li class="footer__social-item">
-            <a class="footer__social-link" href="#">
-              <svg class="footer__social-icon" width="20" height="20">
-                <use href="images/sprite.svg#icon-facebook"></use>
-              </svg>
-              <span class="sr-only">Посилання на фейсбук</span>
-            </a>
-          </li>
-          <li class="footer__social-item">
-            <a class="footer__social-link" href="#">
-              <svg class="footer__social-icon" width="20" height="20">
-                <use href="images/sprite.svg#icon-twitter"></use>
-              </svg>
-              <span class="sr-only">Посилання на твіттер</span>
-            </a>
-          </li>
-          <li class="footer__social-item">
-            <a class="footer__social-link" href="#">
-              <svg class="footer__social-icon" width="20" height="20">
-                <use href="images/sprite.svg#icon-instagram"></use>
-              </svg>
-              <span class="sr-only">Посилання на інстаграм</span>
-            </a>
-          </li>
-        </ul>
-      </address>
+      
+      @include('_adress.html')
     </div>
   </div>
 

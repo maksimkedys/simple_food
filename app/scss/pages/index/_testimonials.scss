@@ -1,0 +1,229 @@
+.testimonials {
+  position: relative;
+  &__title {
+    text-align: center;
+    margin-bottom: 60px;
+
+    @include r($lg) {
+      margin-bottom: 45px;
+    }
+    @include r($sm) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+    @include r($lg) {
+      display: block;
+      margin: 0 auto 30px;
+    }
+    @include r($sm) {
+      margin-bottom: 0;
+    }
+  }
+
+  &__img {
+    margin-right: 40px;
+    border-radius: 50%;
+    @include r($lg) {
+      margin: 0 auto 20px;
+    }
+    @include r($sm) {
+      width: 100px;
+      height: 100px;
+    }
+  }
+
+  &__quote {
+    max-width: 649px;
+    width: 100%;
+    @include r($lg) {
+      margin: 0 auto;
+    }
+  }
+
+  &__text {
+    position: relative;
+    margin-bottom: 30px;
+    font-style: italic;
+    line-height: 1.5;
+    padding: 0 40px;
+    @include r($sm) {
+      font-size: 14px;
+      padding: 0 35px;
+      margin-bottom: 20px;
+    }
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      width: 24px;
+      height: 20px;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center;
+    }
+
+    &::before {
+      background-image: url("../images/quote-left.svg");
+      top: 0;
+      left: 0;
+    }
+
+    &::after {
+      background-image: url("../images/quote-right.svg");
+      bottom: 0;
+      right: 0;
+    }
+  }
+
+  &__author {
+    display: block;
+    font-weight: 500;
+    font-style: normal;
+    color: $accent;
+    padding-left: 40px;
+    @include r($sm) {
+      font-size: 16px;
+      padding-left: 35px;
+    }
+  }
+
+  &__author-info {
+    display: block;
+    color: $dark;
+    font-weight: 400;
+    font-size: 14px;
+    margin-top: 15px;
+    @include r($sm) {
+      margin-top: 10px;
+    }
+  }
+
+  &__controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  &__arrow {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid $gray;
+    border-radius: 50%;
+    outline: 2px solid transparent;
+    transition:
+      outline-color 0.4s,
+      background-color 0.4s,
+      border-color 0.4s;
+    @include r($sm) {
+      position: absolute;
+      top: 94px;
+      z-index: 10;
+      &:nth-child(1) {
+        left: 53px;
+      }
+      &:nth-child(3) {
+        right: 53px;
+      }
+    }
+
+    &:focus {
+      outline-color: $accent;
+    }
+
+    &:hover {
+      border-color: rgba($accent, 0.5);
+      background-color: #fff2ed;
+      .testimonials__icon {
+        fill: rgba($accent, 0.5);
+      }
+    }
+
+    &:active {
+      background-color: #fff2ed;
+      border-color: transparent;
+      .testimonials__icon {
+        fill: $accent;
+      }
+    }
+  }
+
+  &__icon {
+    fill: $gray;
+    transition: fill 0.4s;
+  }
+
+  .swiper-pagination-bullets.swiper-pagination-horizontal {
+    width: fit-content;
+  }
+
+  .swiper-pagination-bullet {
+    position: relative;
+    width: 15px;
+    height: 15px;
+    background-color: $gray;
+    opacity: 1;
+    outline: 2px solid transparent;
+    transition:
+      outline-color 0.4s,
+      background-color 0.4s;
+
+    @include r($sm) {
+      display: none;
+    }
+
+    &-active {
+      background-color: $accent;
+    }
+
+    &:not(:last-child) {
+      margin-right: 15px;
+    }
+
+    &::before {
+      content: "";
+      width: 30px;
+      height: 30px;
+      position: absolute;
+      top: -50%;
+      left: -50%;
+    }
+
+    &:focus {
+      outline-color: $accent;
+    }
+
+    &:hover {
+      outline-color: rgba($accent, 0.5);
+      background-color: #fff2ed;
+    }
+
+    &:active {
+      background-color: rgba($accent, 0.5);
+    }
+  }
+
+  .swiper-button-disabled {
+    border-color: $accent;
+    .testimonials__icon {
+      fill: $accent;
+    }
+    &:hover {
+      border-color: $accent;
+      background-color: transparent;
+      .testimonials__icon {
+        fill: $accent;
+      }
+    }
+  }
+}

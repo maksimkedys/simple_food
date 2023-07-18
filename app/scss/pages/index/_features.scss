@@ -1,0 +1,101 @@
+.features {
+  &__container {
+    min-height: 54vh;
+    background-repeat: no-repeat;
+    background-position: center left 70px;
+    background-size: contain;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 1;
+      @include r($lg) {
+        background-color: rgba(249, 250, 255, 0.85);
+      }
+    }
+    @include r($md) {
+      background-position: center;
+    }
+  }
+
+  &__content {
+    max-width: 470px;
+    margin-left: auto;
+    margin-right: 70px;
+    z-index: 2;
+    @include r($lg) {
+      margin-right: 0;
+    }
+  }
+
+  &__title,
+  &__text,
+  &__list {
+    margin-bottom: 30px;
+  }
+
+  &__text {
+    line-height: 1.5;
+    @include r($sm) {
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__list {
+    @include r($sm) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__item {
+    position: relative;
+    padding-left: 64px;
+    @include r($sm) {
+      padding-left: 44px;
+    }
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+    &::before {
+      content: "";
+      width: 34px;
+      height: 34px;
+      position: absolute;
+      background-position: left;
+      background-size: 34px 34px;
+      background-repeat: no-repeat;
+      top: 0;
+      left: 0;
+      @include r($sm) {
+        top: -4px;
+      }
+    }
+    &--storwatch::before {
+      background-image: url("../images/icon-stopwatch.svg");
+    }
+    &--delivery::before {
+      background-image: url("../images/icon-delivery.svg");
+    }
+    &--shop::before {
+      background-image: url("../images/icon-shop.svg");
+    }
+  }
+
+  &__item-text {
+    margin: auto 0;
+    font-size: 24px;
+    line-height: 1.5;
+    color: $darkBlue-900;
+    @include r($sm) {
+      font-size: 18px;
+    }
+  }
+}

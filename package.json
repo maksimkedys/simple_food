@@ -1,16 +1,15 @@
 {
   "name": "start_gulp",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "homepage": "https://maksimkedys.github.io/simple_food",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "predeploy": "gulp build",
+    "deploy": "gh-pages -d dist"
   },
-  "author": "Maksym Kedys",
-  "license": "ISC",
   "devDependencies": {
     "browser-sync": "^2.29.3",
     "del": "^6.1.1",
+    "gh-pages": "^5.0.0",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^8.0.0",
     "gulp-cheerio": "^1.0.0",
@@ -27,6 +26,7 @@
     "sass": "^1.62.1"
   },
   "dependencies": {
-    "slick-carousel": "^1.8.1"
+    "slick-carousel": "^1.8.1",
+    "swiper": "^10.0.4"
   }
 }

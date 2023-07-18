@@ -2,15 +2,17 @@
 @import 'libs';
 @import 'reset';
 @import 'vars';
+@import 'mixins';
 @import 'global';
 
-@import 'components/header';
+@import 'lego/header';
+@import 'lego/mobile-menu';
 
-@import 'components/hero';
-@import 'components/popular';
-@import 'components/features';
-@import 'components/restorant';
-@import 'components/testimonials';
-@import 'components/app';
+@import 'pages/index/hero';
+@import 'pages/index/popular';
+@import 'pages/index/features';
+@import 'pages/index/restaurant';
+@import 'pages/index/testimonials';
+@import 'lego/app';
 
-@import 'components/footer';
+@import 'lego/footer';

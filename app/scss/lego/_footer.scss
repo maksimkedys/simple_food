@@ -1,0 +1,152 @@
+.footer {
+  &__top {
+    padding-bottom: 60px;
+    display: flex;
+    @include r($xl) {
+      justify-content: space-around;
+      gap: 40px;
+    }
+    @include r($lg) {
+      flex-wrap: wrap;
+    }
+    @include r($sm) {
+      flex-direction: column;
+      gap: 20px;
+    }
+  }
+
+  &__top-item {
+    margin-right: 70px;
+    @include r($xl) {
+      margin-right: 0;
+    }
+  }
+
+  &__logo {
+    display: block;
+    margin-bottom: 30px;
+  }
+
+  &__input {
+    max-width: 200px;
+    width: 100%;
+    padding: 13px 15px;
+    margin-bottom: 12px;
+    font-size: 14px;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    background-color: $lite;
+    border: 1px solid $gray;
+    transition: border-color 0.4s;
+
+    &::placeholder {
+      color: $gray;
+      transition: color 0.4s;
+    }
+
+    &:focus {
+      border-color: $accent;
+    }
+
+    &:hover {
+      &::placeholder {
+        color: $darkBlue-900;
+      }
+    }
+  }
+
+  &__btn {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    font-size: 14px;
+    @include r($sm) {
+      padding: 13px 32px;
+      max-width: 200px;
+    }
+
+    &:focus,
+    &:hover,
+    &:active {
+      .footer__btn-icon {
+        fill: $accent;
+      }
+    }
+  }
+
+  &__btn-icon {
+    fill: $lite;
+    margin-right: 15px;
+    transition: fill 0.4s;
+  }
+
+  &__menu {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(90px, auto));
+    grid-gap: 20px 90px;
+    height: 100%;
+    margin-right: 141px;
+    @include r($xl) {
+      margin-right: 0;
+      grid-gap: 20px 40px;
+    }
+    @include r($lg) {
+      grid-template-columns: repeat(3, minmax(90px, auto));
+      order: 1;
+      grid-row-gap: 0;
+    }
+    @include r($sm) {
+      grid-template-columns: repeat(1, minmax(90px, auto));
+    }
+  }
+
+  &__link {
+    letter-spacing: 0.18px;
+    @include r($lg) {
+      display: block;
+      padding: 10px 0;
+    }
+  }
+
+  .contacts {
+    &__list {
+      @include r($lg) {
+        margin-bottom: 7px;
+      }
+    }
+    
+    &__item {
+      @include r($lg) {
+        &:not(:last-child) {
+          @include r($lg) {
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+
+    &__link,
+    &__location {
+      @include r($lg) {
+        padding: 8px 0;
+        font-size: 16px;
+      }
+    }
+  }
+
+  &__bottom {
+    padding: 30px 0;
+    border-top: 1px solid $gray;
+    background-color: $darkBlue-900;
+  }
+
+  &__copy {
+    text-align: center;
+    font-size: 14px;
+    line-height: 1;
+    color: $lite;
+  }
+}
+
+@import "adress";

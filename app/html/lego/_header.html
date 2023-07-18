@@ -3,7 +3,7 @@
 
     <nav class="menu">
       <a class="logo" href="#">
-        <img class="logo__img" src="images/logo.svg" alt="Логотип">
+        <img class="logo__img" src="images/logo.svg" alt="Логотип" width="197" height="39">
       </a>
       <ul class="menu__list">
         <li class="menu__item">
@@ -13,25 +13,19 @@
           <a class="menu__link link" href="#">Страви</a>
         </li>
         <li class="menu__item">
-          <a class="menu__link link" href="#">Контакти</a>
+          <a class="menu__link link" href="#footer">Контакти</a>
         </li>
       </ul>
     </nav>
 
     <ul class="user-nav">
       <li class="user-nav__item">
-        <div class="user-nav__search">
-          <label class="user-nav__search-label">
-            <span class="sr-only">Введіть назву товару</span>
-            <input type="text" class="user-nav__search-input" placeholder="Пошук...">
-          </label>
-          <button class="user-nav__btn user-nav__btn--search" type="button">
-            <svg class="user-nav__icon" width="21" height="22">
-              <use href="images/sprite.svg#icon-search"></use>
-            </svg>
-            <span class="sr-only">Кнопка пошуку товарів</span>
-          </button>
-        </div>
+        <button class="user-nav__btn" type="button">
+          <svg class="user-nav__icon" width="21" height="22">
+            <use href="images/sprite.svg#icon-search"></use>
+          </svg>
+          <span class="sr-only">Кнопка пошуку товарів</span>
+        </button>
       </li>
       <li class="user-nav__item">
         <button class="user-nav__btn" type="button">
@@ -44,5 +38,9 @@
       </li>
     </ul>
 
+    <button class="burger-menu" type="button">
+      <span class="burger-menu__line"></span>
+      <span class="sr-only">Відкрити меню</span>
+    </button>
   </div>
 </header>

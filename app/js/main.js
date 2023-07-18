@@ -1,30 +1,58 @@
 $(function () {
-  
+
+  $(".burger-menu").on('click', () => {
+    $(".mobile-menu").toggleClass("active");
+    if ($(".mobile-menu").hasClass("active")) {
+      $('body').addClass("lock");
+    }
+  });
+  $(document).on('click', function (event) {
+    if (event.target !== $(".burger-menu")[0] && event.target !== $(".mobile-menu")[0]) {
+      $(".mobile-menu").removeClass("active");
+      $('body').removeClass("lock");
+    }
+  });
+
+  $(window).on("load resize", function () {
+    if ($(window).width() < 577) {
+      $(".restaurant__list:not(.slick-initialized)").slick({
+        arrows: false,
+        dots: true,
+        infinite: true,
+        speed: 100,
+        slidesToShow: 1
+      });
+    } else {
+      $(".restaurant__list.slick-initialized").slick("unslick");
+    }
+  });
+
   $('.user-nav__btn--search').on('click', function () {
     $('.user-nav__search').toggleClass('active');
     $('.user-nav__search-input').trigger("focus");
     $('.user-nav__search-input').val('');
   });
 
+  new Swiper('.swiper', {
 
-  $('.testimonials__inner').slick({
-    dots: true,
-    arrows: true,
-    prevArrow: '<button type="button" class="slick-prev"><svg class="slick-icon" width="11" height="19"><use href="images/sprite.svg#prev-arrow"></use></svg></button>',
-    nextArrow: '<button type="button" class="slick-next"><svg class="slick-icon" width="11" height="19"><use href="images/sprite.svg#next-arrow"></use></svg></button>',
-    fade: true
+    pagination: {
+      el: '.testimonials__pagination',
+      clickable: true
+    },
+
+    navigation: {
+      nextEl: '#arrowNext',
+      prevEl: '#arrowPrev',
+    },
+
   });
 
-  $('.slick-arrow').on('click', function() {
-    $('.slick-arrow').removeClass('current');
-    $(this).addClass('current');
-  });
 
   $(window).on('scroll', function () {
     $('.header__container').toggleClass('header__container--scrolled', $(window).scrollTop() > 0);
   });
 
-  var mixer = mixitup('.popular__catalog', {  
+  var mixer = mixitup('.popular__catalog', {
     load: {
       filter: '.burger',
     },
