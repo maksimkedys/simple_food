@@ -1,0 +1,59 @@
+.breadcrumbs {
+  padding: 164px 0 60px;
+
+  @include r($lg) {
+    padding-top: 134px;
+  }
+  @include r($sm) {
+    padding-top: 94px;
+  }
+  @media (max-width: 992px) and (orientation: landscape) {
+    padding-top: 94px;
+  }
+
+  &__list {
+    display: flex;
+    padding: 24px 0;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 49%;
+      bottom: 0;
+      width: 100vw;
+      transform: translateX(-50%);
+      background-color: rgba(255, 104, 56, 0.1);
+      z-index: -1;
+    }
+  }
+
+  &__item {
+    font-size: 14px;
+    &:not(:last-child) {
+      padding-right: 16px;
+      position: relative;
+      &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        right: 5px;
+        transform: translateY(-50%);
+        width: 6px;
+        height: 10px;
+        background-image: url("../images/chevron.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+      }
+    }
+  }
+
+  &__link {
+    font-size: 14px;
+    line-height: 1.2;
+    letter-spacing: 0.42px;
+    color: #505050;
+  }
+}

@@ -8,11 +8,18 @@
 @import 'lego/header';
 @import 'lego/mobile-menu';
 
-@import 'pages/index/hero';
-@import 'pages/index/popular';
-@import 'pages/index/features';
-@import 'pages/index/restaurant';
-@import 'pages/index/testimonials';
+@import 'pages/hero';
+@import 'pages/popular';
+@import 'pages/features';
+@import 'pages/restaurant';
+@import 'pages/testimonials';
 @import 'lego/app';
 
-@import 'lego/footer';
+@import 'lego/breadcrumbs';
+@import 'lego/promo';
+@import 'pages/catalog';
+@import 'lego/filters';
+@import 'lego/pagination';
+
+
+@import 'lego/footer'

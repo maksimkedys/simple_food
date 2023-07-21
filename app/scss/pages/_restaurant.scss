@@ -1,4 +1,4 @@
-.restaurant {
+.restaurant{
   &__title {
     text-align: center;
     margin-bottom: 60px;
@@ -47,7 +47,7 @@
       align-items: center;
       justify-content: center;
       position: relative;
-    } 
+    }
 
     button {
       width: 15px;
@@ -74,13 +74,12 @@
       }
 
       &::before {
-        content: '';
+        content: "";
         position: absolute;
         width: 30px;
         height: 30px;
         top: 0;
         left: 0;
-
       }
     }
   }
@@ -91,3 +90,4 @@
     }
   }
 }
+

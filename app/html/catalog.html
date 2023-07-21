@@ -5,22 +5,26 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Сервіс швидкої доставки їжі SimpleFood | Головна сторінка</title>
+  <title>Сервіс швидкої доставки їжі SimpleFood | Каталог продуктів</title>
   <link rel="shortcut icon" href="images/icons/favicon.svg" type="image/x-icon">
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 
 <body>
 
-  @include('lego/_header.html')
-
+  @include('lego/_header.html', {
+    "link1": "",
+    "link2": " current",
+  })
   <main class="main">
-    
-    
-
+    @include('lego/_mobile-menu.html', {
+    "link1": "",
+    "link2": " current",
+    })
+    @include('lego/_breadcrumbs.html')
+    @include('pages/_catalog.html')
     @include('lego/_app.html')
-
-
+    @include('lego/_promo.html')
   </main>
 
   @include('lego/_footer.html')

@@ -1,0 +1,122 @@
+<section class="catalog section">
+  <div class="container">
+    <div class="catalog__top">
+      <h2 class="catalog__title title">
+        Каталог продуктів
+      </h2>
+      <div class="catalog__top-box">
+        <button class="catalog__top-btn" type="button">
+          <svg class="catalog__top-icon" width="32" height="36">
+            <use href="images/sprite.svg#icon-filter"></use>
+          </svg>
+        </button>
+        <form class="catalog__top-form" action="#">
+          <select class="catalog__top-select" name="byName">
+            <option value="name">За назвою</option>
+            <option value="weight">За вагою</option>
+            <option value="price">За ціною</option>
+            <option value="rating">За рейтингом</option>
+          </select>
+          <select class="catalog__top-select" name="byNumber">
+            <option value="12">По 12</option>
+            <option value="8">По 8</option>
+            <option value="4">По 4</option>
+          </select>
+        </form>
+      </div>
+    </div>
+    <div class="catalog__inner">
+      @include('../lego/_filters.html')
+      <div class="catalog__content">
+        <ul class="catalog__list">
+          <li class="catalog__item">
+            @include('../lego/_product-card.html', {
+            "src": "images/product-card/burger1.jpg",
+            "title": "Чізбургер з листям салату",
+            "price": "160",
+            })
+          </li>
+          <li class="catalog__item">
+            @include('../lego/_product-card.html', {
+            "src": "images/product-card/burger2.jpg",
+            "title": "Біфбургер",
+            "price": "190",
+            })
+          </li>
+          <li class="catalog__item">
+            @include('../lego/_product-card.html', {
+            "src": "images/product-card/burger3.jpg",
+            "title": "Королівський чізбургер",
+            "price": "260",
+            })
+          </li>
+          <li class="catalog__item">
+            @include('../lego/_product-card.html', {
+            "src": "images/product-card/burger4.jpg",
+            "title": "Чорний гамбургер",
+            "price": "199",
+            })
+          </li>
+          <li class="catalog__item">
+            @include('../lego/_product-card.html', {
+            "src": "images/product-card/burger1.jpg",
+            "title": "Чізбургер з листям салату",
+            "price": "160",
+            })
+          </li>
+          <li class="catalog__item">
+            @include('../lego/_product-card.html', {
+            "src": "images/product-card/burger2.jpg",
+            "title": "Біфбургер",
+            "price": "190",
+            })
+          </li>
+          <li class="catalog__item">
+            @include('../lego/_product-card.html', {
+            "src": "images/product-card/burger3.jpg",
+            "title": "Королівський чізбургер",
+            "price": "260",
+            })
+          </li>
+          <li class="catalog__item">
+            @include('../lego/_product-card.html', {
+            "src": "images/product-card/burger4.jpg",
+            "title": "Чорний гамбургер",
+            "price": "199",
+            })
+          </li>
+          <li class="catalog__item">
+            @include('../lego/_product-card.html', {
+            "src": "images/product-card/burger1.jpg",
+            "title": "Чізбургер з листям салату",
+            "price": "160",
+            })
+          </li>
+          <li class="catalog__item">
+            @include('../lego/_product-card.html', {
+            "src": "images/product-card/burger2.jpg",
+            "title": "Біфбургер",
+            "price": "190",
+            })
+          </li>
+          <li class="catalog__item">
+            @include('../lego/_product-card.html', {
+            "src": "images/product-card/burger3.jpg",
+            "title": "Королівський чізбургер",
+            "price": "260",
+            })
+          </li>
+          <li class="catalog__item">
+            @include('../lego/_product-card.html', {
+            "src": "images/product-card/burger4.jpg",
+            "title": "Чорний гамбургер",
+            "price": "199",
+            })
+          </li>
+        </ul>
+        @include('../lego/_pagination.html')
+      </div>
+    </div>
+
+  </div>
+</section>

@@ -1,61 +1,30 @@
+@use "sass:math";
 @mixin r($width) {
   @media (max-width: #{$width}px) {
     @content;
   }
 }
 
-@mixin burger($burgerWidth, $burgerHeight, $burgerLineHeight, $burgerColor) {
-  width: $burgerWidth;
-  height: $burgerHeight;
-  position: relative;
-  color: $burgerColor;
+@mixin recolor($color: #000) {
+  $r: math.div(red($color), 255);
+  $g: math.div(green($color), 255);
+  $b: math.div(blue($color), 255);
+  $a: alpha($color);
 
-  &__line {
-    position: absolute;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 100%;
-    height: $burgerLineHeight;
-    background-color: currentColor;
-    transition: transform 0.3s ease-in-out;
-  }
+  $lightness: lightness($color);
+  filter: saturate(0%) brightness(0%) invert($lightness) opacity($a);
 
-  &::before,
-  &::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    width: 100%;
-    height: $burgerLineHeight;
-    background-color: currentColor;
-    transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
-  }
-
-  &::before {
-    top: 0;
-  }
-
-  &::after {
-    top: calc(100% - $burgerLineHeight);
-  }
-
-  // &--active {
-  //   .burger-menu__line {
-  //     transform: scale(0);
-  //     transition: transform 0.3s ease-in-out;
-  //   }
-
-  //   &::before {
-  //     transform: rotate(45deg);
-  //     top: 50%;
-  //     transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
-  //   }
-
-  //   &::after {
-  //     transform: rotate(-45deg);
-  //     top: 50%;
-  //     transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
-  //   }
-  // }
+  $svg-filter-id: "recolor";
+  filter: url('data:image/svg+xml;utf8,\
+    <svg xmlns="http://www.w3.org/2000/svg">\
+      <filter id="#{$svg-filter-id}" color-interpolation-filters="sRGB">\
+        <feColorMatrix type="matrix" values="\
+         0 0 0 0 #{$r}\
+         0 0 0 0 #{$g}\
+         0 0 0 0 #{$b}\
+         0 0 0 #{$a} 0\
+        "/>\
+      </filter>\
+    </svg>\
+    ##{$svg-filter-id}');
 }

@@ -1,0 +1,140 @@
+.filter {
+  border: 1px solid $silver-200;
+  border-radius: 5px;
+  background-color: $lite;
+  max-width: 270px;
+  width: 100%;
+  &:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
+
+.filters {
+  min-width: 270px;
+  margin-right: 30px;
+  
+  &__close {
+    height: 40px;
+    width: 40px;
+    margin-left: auto;
+    margin-bottom: 20px;
+    background-color: #FAEDED;
+    display: none;
+  }
+  
+  &__title {
+    padding: 15px;
+    border-bottom: 1px solid $silver-200;
+    color: $darkBlue-900;
+    font-size: 24px;
+    line-height: 1.2;
+    letter-spacing: 0.72px;
+  }
+  &__content {
+    padding: 19px 15px;
+  }
+
+  &__link {
+    display: block;
+    padding: 6px 0;
+    &.current {
+      color: $accent;
+    }
+  }
+
+  &__offer-label {
+    display: block;
+    position: relative;
+    padding: 6px 0;
+    padding-left: 36px;
+    font-size: 18px;
+    letter-spacing: 0.54px;
+    transition: color 0.4s;
+    &:focus {
+      .filters__offer-checkbox {
+        border-color: $accent;
+      }
+    }
+    &:hover {
+      color: $accent;
+      .filters__offer-checkbox {
+        border-color: $accent;
+      }
+    }
+  }
+  &__offer-input {
+    &:checked + .filters__offer-checkbox {
+      border-color: $darkBlue-900;
+      background-image: url("../images/checked.svg");
+    }
+  }
+  &__offer-checkbox {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    left: 0;
+    top: 4px;
+    border-radius: 3px;
+    border: 1px solid $gray;
+    background: rgba($accent, 0.2);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 12px 9px;
+    transition: border-color 0.4s;
+  }
+
+  &__price-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__price-label {
+    color: $gray;
+    font-size: 16px;
+    line-height: 1.2;
+    letter-spacing: 0.48px;
+  }
+  &__price-from,
+  &__price-to {
+    padding: 12px 0;
+    width: 70px;
+    text-align: center;
+    line-height: 1;
+    border-radius: 3px;
+    border: 1px solid rgba($accent, 0.1);
+    background-color: #faeded;
+    transition: border-color 0.4s;
+    &:focus {
+      border-color: $accent;
+    }
+  }
+
+  .irs-line {
+    background-color: $gray;
+    height: 2px;
+  }
+  .irs-bar {
+    background-color: $accent;
+    height: 2px;
+  }
+  .irs-handle {
+    // position: relative;
+    width: 18px;
+    height: 18px;
+    background-color: $accent;
+    border-radius: 50%;
+    border: transparent;
+    &::before {
+      content: '';
+      position: absolute;
+      width: 44px;
+      height: 44px;
+      top: -13px;
+      left: -13px;
+    }
+  }
+  .irs-handle:hover,
+  .irs-handle.state_hover {
+    background-color: $accent;
+  }
+}

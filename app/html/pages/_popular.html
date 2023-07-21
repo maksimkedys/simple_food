@@ -1,0 +1,125 @@
+<section class="popular section">
+  <div class="container">
+    <h2 class="popular__title title">
+      Популярне в категоріях
+    </h2>
+
+    <ul class="popular__list">
+      <li class="popular__item">
+        <button class="popular__btn" type="button" data-filter=".burger">
+          <svg class="popular__btn-icon">
+            <use href="images/sprite.svg#icon-burger"></use>
+          </svg>
+          Бургери
+        </button>
+      </li>
+      <li class="popular__item">
+        <button class="popular__btn" type="button" data-filter=".pizza">
+          <svg class="popular__btn-icon">
+            <use href="images/sprite.svg#icon-pizza"></use>
+          </svg>
+          Піца
+        </button>
+      </li>
+      <li class="popular__item">
+        <button class="popular__btn" type="button" data-filter=".sandwich">
+          <svg class="popular__btn-icon">
+            <use href="images/sprite.svg#icon-sandwich"></use>
+          </svg>
+          Сендвічі
+        </button>
+      </li>
+      <li class="popular__item">
+        <button class="popular__btn" type="button" data-filter=".asian">
+          <svg class="popular__btn-icon">
+            <use href="images/sprite.svg#icon-asian"></use>
+          </svg>
+          Азійська кухня
+        </button>
+      </li>
+      <li class="popular__item">
+        <button class="popular__btn" type="button" data-filter=".set">
+          <svg class="popular__btn-icon">
+            <use href="images/sprite.svg#icon-set"></use>
+          </svg>
+          Cети
+        </button>
+      </li>
+    </ul>
+
+    <ul class="popular__catalog">
+      <li class="popular__catalog-item mix burger sandwich">
+        @include('../lego/_product-card.html', {
+        "src": "images/product-card/burger1.jpg",
+        "title": "Чізбургер з листям салату",
+        "price": "160",
+        })
+      </li>
+      <li class="popular__catalog-item mix burger pizza">
+        @include('../lego/_product-card.html', {
+        "src": "images/product-card/burger2.jpg",
+        "title": "Біфбургер",
+        "price": "190",
+        })
+      </li>
+      <li class="popular__catalog-item mix burger asian">
+        @include('../lego/_product-card.html', {
+        "src": "images/product-card/burger3.jpg",
+        "title": "Королівський чізбургер",
+        "price": "260",
+        })
+      </li>
+      <li class="popular__catalog-item mix burger">
+        @include('../lego/_product-card.html', {
+        "src": "images/product-card/burger4.jpg",
+        "title": "Чорний гамбургер",
+        "price": "199",
+        })
+      </li>
+      <li class="popular__catalog-item mix burger set">
+        @include('../lego/_product-card.html', {
+        "src": "images/product-card/burger5.jpg",
+        "title": "Чікен бургер",
+        "price": "180",
+        })
+      </li>
+      <li class="popular__catalog-item mix burger ">
+        @include('../lego/_product-card.html', {
+        "src": "images/product-card/burger1.jpg",
+        "title": "Чізбургер з листям салату",
+        "price": "160",
+        })
+      </li>
+      <li class="popular__catalog-item mix burger sandwich">
+        @include('../lego/_product-card.html', {
+        "src": "images/product-card/burger2.jpg",
+        "title": "Біфбургер",
+        "price": "190",
+        })
+      </li>
+      <li class="popular__catalog-item mix burger set">
+        @include('../lego/_product-card.html', {
+        "src": "images/product-card/burger3.jpg",
+        "title": "Королівський чізбургер",
+        "price": "260",
+        })
+      </li>
+      <li class="popular__catalog-item mix burger pizza">
+        @include('../lego/_product-card.html', {
+        "src": "images/product-card/burger4.jpg",
+        "title": "Чорний гамбургер",
+        "price": "199",
+        })
+      </li>
+      <li class="popular__catalog-item mix burger asian">
+        @include('../lego/_product-card.html', {
+        "src": "images/product-card/burger5.jpg",
+        "title": "Чікен бургер",
+        "price": "180",
+        })
+      </li>
+    </ul>
+
+    <a class="popular__link show-more" href="catalog.html">Показати ще</a>
+  </div>
+</section>

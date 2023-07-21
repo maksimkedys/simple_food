@@ -1,0 +1,105 @@
+<div class="filters">
+  <button class="filters__close" type="button">
+    <svg class="mobile-menu__icon" width="18" height="18">
+      <use href="images/sprite.svg#icon-close"></use>
+    </svg>
+  </button>
+  <div class="filters__categories filter">
+    <h3 class="filters__title">
+      Категорії
+    </h3>
+    <div class="filters__content">
+
+      <ul class="filters__list">
+        <li class="filters_item">
+          <a class="filters__link link current" href="#">
+            Бургери
+          </a>
+        </li>
+        <li class="filters_item">
+          <a class="filters__link link" href="#">
+            Піца
+          </a>
+        </li>
+        <li class="filters_item">
+          <a class="filters__link link" href="#">
+            Сендвічі
+          </a>
+        </li>
+        <li class="filters_item">
+          <a class="filters__link link" href="#">
+            Азійська кухня
+          </a>
+        </li>
+        <li class="filters_item">
+          <a class="filters__link link" href="#">
+            Сети
+          </a>
+        </li>
+        <li class="filters_item">
+          <a class="filters__link link" href="#">
+            Європейська кухня
+          </a>
+        </li>
+        <li class="filters_item">
+          <a class="filters__link link" href="#">
+            Напої
+          </a>
+        </li>
+        <li class="filters_item">
+          <a class="filters__link link" href="#">
+            Алкоголь
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="filters__offer filter">
+    <h3 class="filters__title">
+      Пропозиції
+    </h3>
+    <div class="filters__content">
+      <form class="filters__offer-form" action="#">
+        <label class="filters__offer-label">
+          <input class="filters__offer-input sr-only" name="offerFilter" type="checkbox">
+          <span class="filters__offer-checkbox"></span>
+          Зі знижкою
+        </label>
+        <label class="filters__offer-label">
+          <input class="filters__offer-input sr-only" checked name="offerFilter" type="checkbox">
+          <span class="filters__offer-checkbox"></span>
+          Новинка
+        </label>
+        <label class="filters__offer-label">
+          <input class="filters__offer-input sr-only" name="offerFilter" type="checkbox">
+          <span class="filters__offer-checkbox"></span>
+          Хіт сезону
+        </label>
+      </form>
+    </div>
+  </div>
+  <div class="filters__price filter">
+    <h3 class="filters__title">
+      Ціна
+    </h3>
+    <div class="filters__content">
+      <form class="filters__price-form" action="#">
+        <div class="filters__price-box">
+          <label class="filters__price-label">
+            від
+            <input class="filters__price-from" name="priceFrom" value="0" type="text">
+            ₴
+          </label>
+          <label class="filters__price-label">
+            до
+            <input class="filters__price-to" name="priceTo" value="0" type="text">
+            ₴
+          </label>
+        </div>
+        <label class="filters__price-label" for="ionRangeSlider"> </label>
+        <input class="filters__price-input" name="ionRangeSlider" value="0" type="text" data-min="0" data-max="1100"
+          data-from="100" data-to="1000">
+      </form>
+    </div>
+  </div>
+</div>

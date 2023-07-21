@@ -12,19 +12,25 @@
 
 <body>
 
-  @include('lego/_header.html')
+  @include('lego/_header.html', {
+  "link1": " current",
+  "link2": "",
+  })
   
   <main class="main">
     <h1 class="sr-only">
       Сервіс швидкої доставки їжі SimpleFood
     </h1>
 
-    @include('lego/_mobile-menu.html')
-    @include('pages/index/_hero.html')
-    @include('pages/index/_popular.html')
-    @include('pages/index/_features.html')
-    @include('pages/index/_restaurant.html')
-    @include('pages/index/_testimonials.html')
+    @include('lego/_mobile-menu.html', {
+    "link1": " current",
+    "link2": "",
+    })
+    @include('pages/_hero.html')
+    @include('pages/_popular.html')
+    @include('pages/_features.html')
+    @include('pages/_restaurant.html')
+    @include('pages/_testimonials.html')
     @include('lego/_app.html')
 
 

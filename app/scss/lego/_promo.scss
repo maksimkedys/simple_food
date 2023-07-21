@@ -1,0 +1,94 @@
+.promo {
+  &__title {
+    margin-bottom: 60px;
+    @include r($lg) {
+      margin-bottom: 45px;
+    }
+    @include r($sm) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    @include r($lg) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    &.slick-initialized {
+      display: block;
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 10px;
+    background-color: $lite;
+    box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.4s;
+    &:hover {
+      box-shadow: 0 3px 15px 0 rgba(255, 104, 56, 0.5);
+    }
+  }
+
+  .slick-slide.slick-current.slick-active {
+    margin-bottom: 45px;
+  }
+  
+  .slick-dots {
+    display: flex;
+    justify-content: center;
+
+    li {
+      width: 30px;
+      height: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+
+    button {
+      width: 15px;
+      height: 15px;
+      font-size: 0;
+      background-color: $gray;
+      border: 2px solid transparent;
+      border-radius: 50%;
+      transition:
+        background-color 0.4s,
+        border-color 0.4s;
+
+      &:focus {
+        border-color: $accent;
+      }
+
+      &:hover {
+        background-color: #fff2ed;
+        border-color: rgba(255, 104, 56, 0.5);
+      }
+
+      &:active {
+        background-color: rgba(255, 104, 56, 0.5);
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        top: 0;
+        left: 0;
+      }
+    }
+  }
+
+  .slick-active {
+    button {
+      background-color: $accent;
+    }
+  }
+}

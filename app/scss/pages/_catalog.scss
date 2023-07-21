@@ -1,0 +1,182 @@
+.catalog {
+  &__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 60px;
+
+    @include r($lg) {
+      margin-bottom: 45px;
+    }
+    @include r($md) {
+      display: block;
+    }
+    @include r($sm) {
+      margin-bottom: 30px;
+    }
+  }
+  &__title {
+    @include r($md) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__top-box {
+    display: flex;
+    align-items: center;
+  }
+
+  &__top-btn {
+    margin-right: 20px;
+    width: 47px;
+    height: 47px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 3px;
+    background-color: #faeded;
+    display: none;
+    @include r($lg) {
+      display: flex;
+    }
+  }
+
+  &__top-icon {
+    fill: $accent;
+  }
+
+  &__top-select {
+    &:not(:last-child) {
+      margin-right: 20px;
+    }
+  }
+  .jq-selectbox {
+    &__select {
+      border-radius: 3px;
+      border: 1px solid $gray;
+      background-color: $lite;
+      padding-right: 25px;
+      transition: border-color 0.4s;
+      &:focus {
+        border-color: $accent;
+      }
+      &:hover {
+        border-color: $accent;
+        .jq-selectbox__select-text {
+          color: $accent;
+        }
+        .jq-selectbox__trigger-arrow {
+          @include recolor($accent);
+        }
+      }
+    }
+    &__select-text {
+      padding: 15px;
+      color: $dark;
+      font-size: 14px;
+      line-height: 1.2;
+      letter-spacing: 0.42px;
+      transition: color 0.4s;
+    }
+    &__trigger-arrow {
+      background-image: url("../images/sprite.svg#chevron");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      position: absolute;
+      top: 19px;
+      right: 15px;
+      width: 6px;
+      height: 10px;
+      transform: rotate(90deg);
+      @include recolor($gray);
+      transition: all 0.4s;
+    }
+    &__dropdown {
+      width: 100%;
+      margin-top: 2px;
+      border: 1px solid $gray;
+      border-radius: 3px;
+      background-color: $lite;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+      color: $dark;
+      font-size: 14px;
+      line-height: 1.2;
+      letter-spacing: 0.42px;
+      li {
+        padding: 10px;
+        transition: color 0.4s;
+        &.sel {
+          background-color: $accent;
+          color: $lite;
+          transition: background-color 0.4s;
+          &:hover {
+            background-color: $lite;
+          }
+        }
+        &:hover {
+          color: $accent;
+        }
+      }
+    }
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    @include r($lg) {
+      justify-content: center;
+    }
+  }
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin-bottom: 60px;
+    @include r($lg) {
+      margin-bottom: 45px;
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @include r($sm) {
+      margin-bottom: 30px;
+      gap: 10px 5px;
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  .filters {
+    @include r($lg) {
+      padding: 20px 20px 20px 0;
+      overflow-y: scroll;
+      position: fixed;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      width: 85%;
+      background-color: $lite;
+      z-index: 1001;
+      transform: translateX(-200%);
+      transition: transform 0.6s;
+      &.active {
+        transform: translateX(0);
+      }
+    }
+    &__close {
+      @include r($lg) {
+        display: block;
+      }
+    }
+  }
+
+  .pagination {
+    @include r($sm) {
+      &__item {
+        &:nth-child(3) {
+          display: none;
+        }
+        &:nth-child(5) {
+          display: none;
+        }
+      }
+    }
+  }
+}

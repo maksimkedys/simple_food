@@ -48,8 +48,41 @@
 }
 
 .burger-menu {
-  @include burger(30px, 20px, 2px, $darkBlue-900);
   display: none;
+  width: 44px;
+  height: 44px;
+  position: relative;
+  color: $darkBlue-900;
+
+  &__line {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 30px;
+    height: 2px;
+    background-color: currentColor;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30px;
+    height: 2px;
+    background-color: currentColor;
+  }
+
+  &::before {
+    top: 12px;
+  }
+
+  &::after {
+    top: calc(100% - 14px);
+  }
   @include r($lg) {
     display: block;
   }
@@ -59,8 +92,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: calc(100% - 98px);
-
+  width: 100%;
   &__list {
     display: flex;
     margin-right: 50px;
@@ -85,6 +117,7 @@
 
 .user-nav {
   display: flex;
+  margin-left: auto;
   @include r($lg) {
     margin-right: 17px;
   }
