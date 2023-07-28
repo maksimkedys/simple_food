@@ -20,21 +20,26 @@
   .swiper-wrapper {
     height: 300px;
   }
-  &__swiper-pagination {
+  &__pagination {
     display: none;
-    margin: 0 auto;
+    margin: 0 auto; 
     @include r($sm) {
       display: block;
     }
+  }
+  .pagination {
+    display: none;
   }
   .controls {
     @include r($sm) {
       display: none;
     }
   }
-  .swiper-slide--hidden {
-    @include r($sm) {
-      display: none;
+  .swiper-slide {
+    &--hidden {
+      @include r($sm) {
+        display: none;
+      }
     }
   }
 }

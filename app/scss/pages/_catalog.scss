@@ -24,25 +24,33 @@
   &__top-box {
     display: flex;
     align-items: center;
+    overflow-x: auto;
+  }
+
+  &__top-form {
+    white-space: nowrap;
   }
 
   &__top-btn {
+    flex-shrink: 0;
     margin-right: 20px;
     width: 47px;
     height: 47px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    position: relative;
+    display: none;
     border-radius: 3px;
     background-color: #faeded;
-    display: none;
     @include r($lg) {
-      display: flex;
+      display: block;
     }
   }
 
   &__top-icon {
     fill: $accent;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
 
   &__top-select {

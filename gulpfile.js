@@ -110,7 +110,8 @@ function build() {
     'app/css/style.min.css',
     'app/images/sprite.svg',
     'app/images/*.svg',
-    'app/js/main.min.js'
+    'app/js/main.min.js',
+    'app/fonts/**/*.*'
   ], { base: 'app' })
     .pipe(dest('dist'))
 }

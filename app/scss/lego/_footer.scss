@@ -1,6 +1,6 @@
 .footer {
   &__top {
-    padding-bottom: 60px;
+    margin-bottom: 60px;
     display: flex;
     @include r($xl) {
       justify-content: space-around;
@@ -12,6 +12,7 @@
     @include r($sm) {
       flex-direction: column;
       gap: 20px;
+      margin-bottom: 50px;
     }
   }
 
@@ -115,7 +116,7 @@
         margin-bottom: 7px;
       }
     }
-    
+
     &__item {
       @include r($lg) {
         &:not(:last-child) {
