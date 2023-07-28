@@ -1,0 +1,81 @@
+<section class="product">
+  <div class="container">
+    <div class="product__inner">
+      <div class="product__gallery swiper">
+        <ul class="product__list swiper-wrapper">
+          <li class="product__item swiper-slide">
+            <a class="product__link" href="#">
+              <img class="product__img" src="images/product-card/burger1.jpg" alt="Чізбургер з листям салату" width="400" height="400">
+            </a>
+          </li>
+          <li class="product__item swiper-slide">
+            <a class="product__link" href="#">
+              <img class="product__img" src="images/product-card/burger4.jpg" alt="Чізбургер з листям салату" width="400" height="400">
+            </a>
+          </li>
+          <li class="product__item swiper-slide">
+            <a class="product__link" href="#">
+              <img class="product__img" src="images/product-card/burger3.jpg" alt="Чізбургер з листям салату" width="400" height="400">
+            </a>
+          </li>
+        </ul>
+        <button class="product__arrows product__prev" type="button">
+          <svg class="product__arrows-icon" width="19" height="32">
+            <use href="images/sprite.svg#arrow-left"></use>
+          </svg>
+        </button>
+        <button class="product__arrows product__next" type="button">
+          <svg class="product__arrows-icon" width="19" height="32">
+            <use href="images/sprite.svg#arrow-right"></use>
+          </svg>
+        </button>
+      </div>
+      <div class="product__content">
+        <h2 class="product__title title">
+          Чізбургер з листям салату
+        </h2>
+        <div class="product__rating rating" data-rateyo-rating="4">
+          <span class="sr-only">Оцінка </span>
+        </div>
+        <span class="product__price">
+          160
+          <span class="currency">грн.</span>
+        </span>
+        <div class="product__holder">
+          <form class="product__form" action="#">
+            <label class="product__label">
+              <span class="sr-only">Кількість одиниць продукту</span>
+              <input class="product__quantity" type="number" name="GoodsQuantity" value="1" min="1" max="50" readonly>
+            </label>
+          </form>
+          <button class="product__btn btn btn--big">
+            <svg class="product__btn-icon" width="16" height="16">
+              <use href="images/sprite.svg#icon-cart"></use>
+            </svg>
+            Додати до кошика
+          </button>
+        </div>
+        <div class="product__box">
+          <h3 class="product__box-title">
+            Доставка та оплата
+          </h3>
+          <ul class="product__box-list">
+            <li class="product__box-item">
+              Мінімальна сума замовлення — 160 грн.
+            </li>
+            <li class="product__box-item">
+              Час доставки замовлення — 80-140 мин.
+            </li>
+            <li class="product__box-item">
+              Оплата здійснюється тільки банківською карткою.
+            </li>
+            <li class="product__box-item">
+              Остаточна сума замовлення формується після збору товарів.
+            </li>
+          </ul>
+          <a class="product__box-link show-more" href="#">Детальніше</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

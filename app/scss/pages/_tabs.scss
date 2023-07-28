@@ -1,0 +1,232 @@
+.tab {
+  padding-top: 30px;
+  &__container {
+    max-width: 720px;
+  }
+
+  &__head {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    margin-bottom: 30px;
+    @include r($md) {
+      gap: 45px;
+    }
+    @include r($sm) {
+      overflow-x: scroll;
+      gap: 30px;
+    }
+  }
+  &__head-link {
+    font-size: 24px;
+    line-height: 1.5;
+    color: $darkBlue-900;
+    white-space: nowrap;
+    &.current {
+      color: $accent;
+    }
+    @include r($sm) {
+      font-size: 20px;
+      overflow-x: scroll;
+    }
+  }
+  &__content-item {
+    display: none;
+    p {
+      line-height: 1.5;
+      opacity: 0.9;
+      &:not(:last-child) {
+        margin-bottom: 22px;
+      }
+      @include r($sm) {
+        font-size: 16px;
+      }
+    }
+    &.current {
+      display: block;
+    }
+  }
+
+  &__characteristic {
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+  &__characteristics-name {
+    @include r($sm) {
+      font-size: 16px;
+    }
+    font-weight: 500;
+  }
+  &__characteristics-text {
+    font-weight: 400;
+  }
+
+  &__content-title {
+    margin-bottom: 30px;
+    color: $darkBlue-900;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 1.2;
+    letter-spacing: 0.72px;
+    @include r($sm) {
+      font-size: 20px;
+    }
+  }
+  &__reviews {
+    margin-bottom: 60px;
+    @include r($sm) {
+      margin-bottom: 45px;
+    }
+  }
+  &__review {
+    margin-top: 25px;
+    @include r($sm) {
+      margin-top: 15px;
+    }
+    &:not(:last-child) {
+      padding-bottom: 20px;
+      border-bottom: 1px solid #e4e4e4;
+    }
+  }
+  &__review-head {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @include r($sm) {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 15px;
+    }
+  }
+  &__review-box {
+    display: flex;
+    gap: 25px;
+  }
+  &__review-avatar {
+    border-radius: 50%;
+  }
+  &__review-author {
+    color: #505050;
+    font-style: normal;
+    font-weight: 500;
+  }
+  &__review-date {
+    margin-top: 10px;
+    display: block;
+    font-size: 18px;
+    font-weight: 400;
+  }
+  &__review-text {
+    line-height: 1.5;
+    @include r($sm) {
+      font-size: 16px;
+    }
+  }
+
+  &__form-label {
+    display: block;
+    color: #505050;
+    &--rating {
+      margin-bottom: 20px;
+    }
+    &--area {
+      max-width: 400px;
+      width: 100%;
+      @include r($md) {
+        max-width: 100%;
+      }
+    }
+    &--checkbox {
+      position: relative;
+      margin-bottom: 30px;
+      padding-left: 34px;
+      @include r($sm) {
+        font-size: 18px;
+      }
+    }
+  }
+  &__form-rating {
+    display: inline-block;
+  }
+  &__form-box {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    margin-bottom: 30px;
+    @include r($md) {
+      flex-direction: column;
+      gap: 20px;
+    }
+  }
+  &__form-field {
+    padding: 15px 18px;
+    margin-top: 15px;
+    max-width: 260px;
+    width: 100%;
+    display: block;
+    border-radius: 5px;
+    border: 1px solid $gray;
+    background: $lite;
+    transition: box-shadow 0.4s;
+
+    &--area {
+      max-width: 400px;
+      min-height: 165px;
+      max-height: 300px;
+      resize: vertical;
+    }
+    &::placeholder {
+      color: #c1c1c1;
+      font-size: 16px;
+      transition: color 0.4s;
+    }
+    &:focus {
+      box-shadow: 0 0 0 2px $accent;
+    }
+    &:hover {
+      &::placeholder {
+        color: $darkBlue-900;
+      }
+    }
+    @include r($md) {
+      max-width: 100%;
+    }
+  }
+  &__form-info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    @include r($md) {
+      gap: 20px;
+    }
+  }
+  &__form-input {
+    &:checked {
+      & + .tab__form-checkbox {
+        border-color: $darkBlue-900;
+        background-image: url("../images/checked.svg");
+      }
+    }
+  }
+  &__form-checkbox {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    left: 0;
+    top: 0;
+    border-radius: 3px;
+    border: 1px solid $gray;
+    background-color: #faeded;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 12px 9px;
+    transition: border-color 0.4s;
+  }
+  &__form-btn {
+    @include r($sm) {
+      font-size: 18px;
+    }
+  }
+}

@@ -5,7 +5,7 @@
       Відгуки клієнтів
     </h2>
 
-    <div class="swiper">
+    <div class="testimonials__swiper swiper">
       <div class="swiper-wrapper">
         <div class="swiper-slide">
           <div class="testimonials__content">
@@ -86,18 +86,9 @@
       </div>
     </div>
 
-    <div class="testimonials__controls">
-      <button class="testimonials__arrow" id="arrowPrev" type="button">
-        <svg class="testimonials__icon" width="11" height="19">
-          <use href="images/sprite.svg#prev-arrow"></use>
-        </svg>
-      </button>
-      <div class="testimonials__pagination"></div>
-      <button class="testimonials__arrow" id="arrowNext" type="button">
-        <svg class="testimonials__icon" width="11" height="19">
-          <use href="images/sprite.svg#next-arrow"></use>
-        </svg>
-      </button>
-    </div>
+    @include('../lego/_controls.html', {
+    "id1": "arrowPrev",
+    "id2": "arrowNext",
+    })
   </div>
 </section>

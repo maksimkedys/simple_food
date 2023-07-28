@@ -1,0 +1,44 @@
+.recent {
+  &__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 60px;
+
+    @include r($lg) {
+      margin-bottom: 45px;
+    }
+    @include r($sm) {
+      margin-bottom: 30px;
+    }
+  }
+  &__swiper {
+    @include r($sm) {
+      margin-bottom: 30px;
+    }
+  }
+  .swiper-wrapper {
+    height: 300px;
+  }
+  &__swiper-pagination {
+    display: none;
+    margin: 0 auto;
+    @include r($sm) {
+      display: block;
+    }
+  }
+  .controls {
+    @include r($sm) {
+      display: none;
+    }
+  }
+  .swiper-slide--hidden {
+    @include r($sm) {
+      display: none;
+    }
+  }
+}
+
+.swiper-wrapper {
+  box-sizing: border-box;
+}

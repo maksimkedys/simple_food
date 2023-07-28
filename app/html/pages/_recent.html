@@ -1,0 +1,88 @@
+<section class="recent section">
+  <div class="container">
+    <div class="recent__top">
+      <h2 class="recent__title title">
+        Вас може зацікавити
+      </h2>
+      @include('../lego/_controls.html', {
+      "id1": "recentPrev",
+      "id2": "recentNext",
+      })
+    </div>
+    <div class="recent__swiper swiper">
+      <ul class="swiper-wrapper">
+        <li class="swiper-slide">
+          @include('../lego/_product-card.html', {
+          "src": "images/product-card/burger1.jpg",
+          "title": "Чізбургер з листям салату",
+          "price": "160",
+          })
+        </li>
+        <li class="swiper-slide">
+          @include('../lego/_product-card.html', {
+          "src": "images/product-card/burger2.jpg",
+          "title": "Біфбургер",
+          "price": "190",
+          })
+        </li>
+        <li class="swiper-slide">
+          @include('../lego/_product-card.html', {
+          "src": "images/product-card/burger3.jpg",
+          "title": "Королівський чізбургер",
+          "price": "260",
+          })
+        </li>
+        <li class="swiper-slide">
+          @include('../lego/_product-card.html', {
+          "src": "images/product-card/burger4.jpg",
+          "title": "Чорний гамбургер",
+          "price": "199",
+          })
+        </li>
+        <li class="swiper-slide">
+          @include('../lego/_product-card.html', {
+          "src": "images/product-card/burger5.jpg",
+          "title": "Чікен бургер",
+          "price": "180",
+          })
+        </li>
+        <li class="swiper-slide">
+          @include('../lego/_product-card.html', {
+          "src": "images/product-card/burger1.jpg",
+          "title": "Чізбургер з листям салату",
+          "price": "160",
+          })
+        </li>
+        <li class="swiper-slide swiper-slide--hidden">
+          @include('../lego/_product-card.html', {
+          "src": "images/product-card/burger2.jpg",
+          "title": "Біфбургер",
+          "price": "190",
+          })
+        </li>
+        <li class="swiper-slide swiper-slide--hidden">
+          @include('../lego/_product-card.html', {
+          "src": "images/product-card/burger3.jpg",
+          "title": "Королівський чізбургер",
+          "price": "260",
+          })
+        </li>
+        <li class="swiper-slide swiper-slide--hidden">
+          @include('../lego/_product-card.html', {
+          "src": "images/product-card/burger4.jpg",
+          "title": "Чорний гамбургер",
+          "price": "199",
+          })
+        </li>
+        <li class="swiper-slide swiper-slide--hidden">
+          @include('../lego/_product-card.html', {
+          "src": "images/product-card/burger5.jpg",
+          "title": "Чікен бургер",
+          "price": "180",
+          })
+        </li>
+      </ul>
+    </div>
+    <div class="recent__swiper-pagination"></div>
+  </div>
+</section>

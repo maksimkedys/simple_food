@@ -1,0 +1,105 @@
+.controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  &__arrow {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid $gray;
+    border-radius: 50%;
+    outline: 2px solid transparent;
+    transition:
+      outline-color 0.4s,
+      background-color 0.4s,
+      border-color 0.4s;
+
+    &:focus {
+      outline-color: $accent;
+    }
+
+    &:hover {
+      border-color: rgba($accent, 0.5);
+      background-color: #fff2ed;
+      .controls__icon {
+        fill: rgba($accent, 0.5);
+      }
+    }
+
+    &:active {
+      background-color: #fff2ed;
+      border-color: transparent;
+      .controls__icon {
+        fill: $accent;
+      }
+    }
+  }
+
+  &__icon {
+    fill: $gray;
+    transition: fill 0.4s;
+  }
+}
+.swiper-pagination-bullets.swiper-pagination-horizontal {
+  width: fit-content;
+}
+
+.swiper-pagination-bullet {
+  position: relative;
+  width: 15px;
+  height: 15px;
+  background-color: $gray;
+  opacity: 1;
+  outline: 2px solid transparent;
+  transition:
+    outline-color 0.4s,
+    background-color 0.4s;
+
+  &-active {
+    background-color: $accent;
+  }
+
+  &:not(:last-child) {
+    margin-right: 15px;
+  }
+
+  &::before {
+    content: "";
+    width: 30px;
+    height: 44px;
+    position: absolute;
+    top: -100%;
+    left: -50%;
+  }
+
+  &:focus {
+    outline-color: $accent;
+  }
+
+  &:hover {
+    outline-color: rgba($accent, 0.5);
+    background-color: #fff2ed;
+  }
+
+  &:active {
+    background-color: rgba($accent, 0.5);
+  }
+}
+
+.swiper-button-disabled {
+  border-color: $accent;
+  .controls__icon {
+    fill: $accent;
+  }
+  &:hover {
+    border-color: $accent;
+    background-color: transparent;
+    .controls__icon {
+      fill: $accent;
+    }
+  }
+}

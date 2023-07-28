@@ -1,0 +1,134 @@
+.product-popup {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  inset: 0;
+  z-index: 1002;
+  background-color: rgba(0, 0, 0, 0.15);
+
+  &__wrapper {
+    position: relative;
+    width: 90vw;
+    height: 90vh;
+    background-color: $lite;
+    border-radius: 15px;
+  }
+
+  &__close {
+    z-index: 10003;
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    border-radius: 3px;
+    background-color: rgba(193, 193, 193, 0.3);
+    transition:
+      background-color 0.4s,
+      box-shadow 0.4s;
+    &:focus {
+      box-shadow: 0 0 0 2px rgba($accent, 0.7);
+      background-color: rgba($accent, 0.1);
+      .product-popup__icon-close {
+        fill: $accent;
+      }
+    }
+    &:hover {
+      background-color: rgba($accent, 0.1);
+      .product-popup__icon-close {
+        fill: $accent;
+      }
+    }
+    &:active {
+      background-color: rgba($accent, 0.1);
+    }
+    @include r($sm) {
+      width: 44px;
+      height: 44px;
+    }
+    @media (max-width: 1024px) and (orientation: landscape) {
+      width: 44px;
+      height: 44px;
+    }
+  }
+  &__icon-close {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    fill: rgba(0, 0, 0, 0.15);
+    transition: fill 0.4s;
+    @include r($sm) {
+      width: 22px;
+      height: 22px;
+    }
+    @media (max-width: 1024px) and (orientation: landscape) {
+      width: 22px;
+      height: 22px;
+    }
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1003;
+  }
+
+  &__img {
+    max-width: 750px;
+    width: 100%;
+    height: min(750px, 70vh);
+    object-fit: contain;
+  }
+
+  &__arrows {
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1003;
+    &--prev {
+      left: 60px;
+    }
+    &--next {
+      right: 60px;
+    }
+    &:focus,
+    &:hover,
+    &:active {
+      .product-popup__icon {
+        fill: $accent;
+      }
+    }
+    @include r($md) {
+      display: none;
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    fill: $darkBlue-900;
+    transition: fill 0.4s;
+  }
+
+  &__pagination {
+    z-index: 1045;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    // gap: 15px;
+  }
+
+  .swiper-pagination-bullets.swiper-pagination-horizontal {
+    bottom: 9%;
+    left: 0;
+    width: 100%;
+  }
+}

@@ -51,10 +51,10 @@
       box-shadow 0.4s;
 
     &:focus {
-      border-color: $accent-07;
+      border-color: rgba($accent, 0.7);
     }
     &:hover {
-      border-color: $accent-07;
+      border-color: rgba($accent, 0.7);
       color: $accent;
       background-color: rgba(255, 104, 56, 0.1);
 

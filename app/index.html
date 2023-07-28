@@ -6,17 +6,17 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Сервіс швидкої доставки їжі SimpleFood | Головна сторінка</title>
-  <link rel="shortcut icon" href="images/icons/favicon.svg" type="image/x-icon">
+  <link rel="shortcut icon" href="images/favicon.svg" type="image/x-icon">
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 
 <body>
 
-  <header class="header">
+  <header class="header" id="header">
   <div class="container header__container">
 
     <nav class="menu">
-      <a class="logo" href="#">
+      <a class="logo" href="#header">
         <img class="logo__img" src="images/logo.svg" alt="Логотип" width="197" height="39">
       </a>
       <ul class="menu__list">
@@ -213,7 +213,7 @@
     <ul class="popular__catalog">
       <li class="popular__catalog-item mix burger sandwich">
         <article class="product-card">
-  <a class="product-card__link" href="#">
+  <a class="product-card__link" href="product.html">
     <img class="product-card__img" src="images/product-card/burger1.jpg" alt="Чізбургер з листям салату" width="140"
       height="140">
   </a>
@@ -229,7 +229,7 @@
       </li>
       <li class="popular__catalog-item mix burger pizza">
         <article class="product-card">
-  <a class="product-card__link" href="#">
+  <a class="product-card__link" href="product.html">
     <img class="product-card__img" src="images/product-card/burger2.jpg" alt="Біфбургер" width="140"
       height="140">
   </a>
@@ -245,7 +245,7 @@
       </li>
       <li class="popular__catalog-item mix burger asian">
         <article class="product-card">
-  <a class="product-card__link" href="#">
+  <a class="product-card__link" href="product.html">
     <img class="product-card__img" src="images/product-card/burger3.jpg" alt="Королівський чізбургер" width="140"
       height="140">
   </a>
@@ -261,7 +261,7 @@
       </li>
       <li class="popular__catalog-item mix burger">
         <article class="product-card">
-  <a class="product-card__link" href="#">
+  <a class="product-card__link" href="product.html">
     <img class="product-card__img" src="images/product-card/burger4.jpg" alt="Чорний гамбургер" width="140"
       height="140">
   </a>
@@ -277,7 +277,7 @@
       </li>
       <li class="popular__catalog-item mix burger set">
         <article class="product-card">
-  <a class="product-card__link" href="#">
+  <a class="product-card__link" href="product.html">
     <img class="product-card__img" src="images/product-card/burger5.jpg" alt="Чікен бургер" width="140"
       height="140">
   </a>
@@ -293,7 +293,7 @@
       </li>
       <li class="popular__catalog-item mix burger ">
         <article class="product-card">
-  <a class="product-card__link" href="#">
+  <a class="product-card__link" href="product.html">
     <img class="product-card__img" src="images/product-card/burger1.jpg" alt="Чізбургер з листям салату" width="140"
       height="140">
   </a>
@@ -309,7 +309,7 @@
       </li>
       <li class="popular__catalog-item mix burger sandwich">
         <article class="product-card">
-  <a class="product-card__link" href="#">
+  <a class="product-card__link" href="product.html">
     <img class="product-card__img" src="images/product-card/burger2.jpg" alt="Біфбургер" width="140"
       height="140">
   </a>
@@ -325,7 +325,7 @@
       </li>
       <li class="popular__catalog-item mix burger set">
         <article class="product-card">
-  <a class="product-card__link" href="#">
+  <a class="product-card__link" href="product.html">
     <img class="product-card__img" src="images/product-card/burger3.jpg" alt="Королівський чізбургер" width="140"
       height="140">
   </a>
@@ -341,7 +341,7 @@
       </li>
       <li class="popular__catalog-item mix burger pizza">
         <article class="product-card">
-  <a class="product-card__link" href="#">
+  <a class="product-card__link" href="product.html">
     <img class="product-card__img" src="images/product-card/burger4.jpg" alt="Чорний гамбургер" width="140"
       height="140">
   </a>
@@ -357,7 +357,7 @@
       </li>
       <li class="popular__catalog-item mix burger asian">
         <article class="product-card">
-  <a class="product-card__link" href="#">
+  <a class="product-card__link" href="product.html">
     <img class="product-card__img" src="images/product-card/burger5.jpg" alt="Чікен бургер" width="140"
       height="140">
   </a>
@@ -543,7 +543,7 @@
       Відгуки клієнтів
     </h2>
 
-    <div class="swiper">
+    <div class="testimonials__swiper swiper">
       <div class="swiper-wrapper">
         <div class="swiper-slide">
           <div class="testimonials__content">
@@ -624,19 +624,19 @@
       </div>
     </div>
 
-    <div class="testimonials__controls">
-      <button class="testimonials__arrow" id="arrowPrev" type="button">
-        <svg class="testimonials__icon" width="11" height="19">
-          <use href="images/sprite.svg#prev-arrow"></use>
-        </svg>
-      </button>
-      <div class="testimonials__pagination"></div>
-      <button class="testimonials__arrow" id="arrowNext" type="button">
-        <svg class="testimonials__icon" width="11" height="19">
-          <use href="images/sprite.svg#next-arrow"></use>
-        </svg>
-      </button>
-    </div>
+    <div class="controls">
+  <button class="controls__arrow" id="arrowPrev" type="button">
+    <svg class="controls__icon" width="11" height="19">
+      <use href="images/sprite.svg#prev-arrow"></use>
+    </svg>
+  </button>
+  <div class="pagination"></div>
+  <button class="controls__arrow" id="arrowNext" type="button">
+    <svg class="controls__icon" width="11" height="19">
+      <use href="images/sprite.svg#next-arrow"></use>
+    </svg>
+  </button>
+</div>
   </div>
 </section>
     <section class="app section">

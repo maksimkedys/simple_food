@@ -13,6 +13,7 @@
 @import 'pages/features';
 @import 'pages/restaurant';
 @import 'pages/testimonials';
+@import 'lego/controls';
 @import 'lego/app';
 
 @import 'lego/breadcrumbs';
@@ -21,5 +22,9 @@
 @import 'lego/filters';
 @import 'lego/pagination';
 
+@import 'pages/product-popup';
+@import 'pages/product';
+@import 'pages/recent';
+@import 'pages/tabs';
 
 @import 'lego/footer'

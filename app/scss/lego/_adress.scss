@@ -59,7 +59,7 @@
       border-color 0.4s;
 
     &:focus {
-      border-color: $accent-07;
+      border-color: rgba($accent, 0.7);
       background-color: $bg-01;
     }
 

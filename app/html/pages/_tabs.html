@@ -1,0 +1,142 @@
+<section class="tab section">
+  <div class="container tab__container">
+    <ul class="tab__head">
+      <li class="tab__head-item">
+        <a class="tab__head-link current" href="#tab-1">
+          Опис
+        </a>
+      </li>
+      <li class="tab__head-item">
+        <a class="tab__head-link" href="#tab-2">
+          Характеристики
+        </a>
+      </li>
+      <li class="tab__head-item">
+        <a class="tab__head-link" href="#tab-3">
+          Відгуки
+          <span>(2)</span>
+        </a>
+      </li>
+    </ul>
+    <div class="tab__content">
+      <div class="tab__content-item current" id="tab-1">
+        <p>
+          Рубаний біфштекс із натуральної яловичини на карамелізованій булочці, зі скибочкою сиру "Чеддер", кетчупом,
+          гірчицею,
+          цибулею та маринованими огірочками.
+        </p>
+        <p>
+          Алергени: глютен, молоко, гірчиця. Може містити сою, яйце, сліди кунжуту
+        </p>
+        <p>
+          Зовнішній вигляд товару може відрізнятися від зображень, представлених на сайті.
+        </p>
+      </div>
+      <div class="tab__content-item" id="tab-2">
+        <ul class="tab__characteristics">
+          <li class="tab__characteristic">
+            <p class="tab__characteristics-name">
+              Діаметр:
+              <span class="tab__characteristics-text">20 см</span>
+            </p>
+          </li>
+          <li class="tab__characteristic">
+            <p class="tab__characteristics-name">
+              Вага:
+              <span class="tab__characteristics-text">300 гр</span>
+            </p>
+          </li>
+          <li class="tab__characteristic">
+            <p class="tab__characteristics-name">
+              Калорійність (на 100г):
+              <span class="tab__characteristics-text">295 ккал</span>
+            </p>
+          </li>
+          <li class="tab__characteristic">
+            <p class="tab__characteristics-name">
+              Термін зберігання:
+              <span class="tab__characteristics-text">до 3 діб</span>
+            </p>
+          </li>
+        </ul>
+      </div>
+      <div class="tab__content-item" id="tab-3">
+        <h3 class="tab__content-title">
+          Думки наших клієнтів
+        </h3>
+        <ul class="tab__reviews">
+          <li class="tab__review">
+            <div class="tab__review-head">
+              <div class="tab__review-box">
+                <img class="tab__review-avatar" src="images/user-avatar.jpg" alt="Андрій" width="70" height="70">
+                <cite class="tab__review-author">
+                  Андрій
+                  <time class="tab__review-date" datetime="10.06.2021">
+                    10.06.2021
+                  </time>
+                </cite>
+              </div>
+              <div class="tab__review-rating rating" data-rateyo-rating="5"></div>
+            </div>
+            <blockquote class="tab__review-text">
+              Доставили швидко. Товар свіжий та дуже смачний, буду ще обов’язково куштувати!
+            </blockquote>
+          </li>
+          <li class="tab__review">
+            <div class="tab__review-head">
+              <div class="tab__review-box">
+                <img class="tab__review-avatar" src="images/user-avatar.jpg" alt="Катерина Біла" width="70" height="70">
+                <cite class="tab__review-author">
+                  Катерина Біла
+                  <time class="tab__review-date" datetime="07.06.2021">
+                    07.06.2021
+                  </time>
+                </cite>
+              </div>
+              <div class="tab__review-rating rating" data-rateyo-rating="4"></div>
+            </div>
+            <blockquote class="tab__review-text">
+              Цей бургер непоганий на смак, особливо, коли немає можливості або часу щось готувати. Це чудовий варіант,
+              щоб перекусити
+              находу, але, щоб себе побалувати, краще замовлю піцу
+            </blockquote>
+          </li>
+        </ul>
+        <h3 class="tab__content-title">
+          Залишити відгук
+        </h3>
+        <form class="tab__form" action="#">
+          <label class="tab__form-label tab__form-label--rating">
+            Ваша оцінка *
+            <div class="tab__form-rating rating" data-rateyo-read-only="false"></div>
+          </label>
+          <div class="tab__form-box">
+            <label class="tab__form-label tab__form-label--area">
+              Ваш відгук *
+              <textarea class="tab__form-field tab__form-field--area" name="message"
+                placeholder="Текст вашого повідомлення" required></textarea>
+            </label>
+            <div class="tab__form-info">
+              <label class="tab__form-label">
+                Ім’я
+                <input class="tab__form-field" type="text" name="name" placeholder="Введіть ваше ім’я" required>
+              </label>
+              <label class="tab__form-label">
+                Email *
+                <input class="tab__form-field" type="email" name="email" placeholder="youremail@mail.com" required>
+              </label>
+            </div>
+          </div>
+          <label class="tab__form-label tab__form-label--checkbox">
+            <input class="tab__form-input sr-only" name="check" type="checkbox">
+            <span class="tab__form-checkbox"></span>
+            Зберегти моє ім’я, email та адресу сайта в цьому браузері для наступних моїх коментарів.
+          </label>
+          <button class="tab__form-btn btn btn--big" type="submit">
+            Залишити відгук
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
